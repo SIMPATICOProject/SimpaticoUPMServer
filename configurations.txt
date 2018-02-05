@@ -1,0 +1,9 @@
+log_local_server_port	1717
+log_local_server_host	locahost
+upm_local_server_port	1616
+upm_local_server_host	localhost
+mysql_local_server_port	3306
+mysql_local_server_host	localhost
+mysql_local_server_user	root
+mysql_local_server_pass	root
+upm_database_name	upm
