@@ -5,6 +5,7 @@ UPM Server implementation
 - MySQL server (Version 14.14 Distribution 5.7.21) - https://dev.mysql.com/
 - Python 2.7 (or older)
 - Python libraries: mysql (https://dev.mysql.com/doc/connector-python/en/)
+(I installed using: `pip install mysql-connector-python-rf`)
 
 ## Files
 - configurations.txt: configuration file with servers names, addresses and ports
