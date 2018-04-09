@@ -36,4 +36,16 @@ Then run:
 
 To start the UPM server. After this, the other test files can be executed.
 
+## Quickstart with docker
 
+1. Set configurations
+```
+docker-configs/configurations.txt
+docker-configs/upm-db.env
+```
+
+2. Run
+
+```
+sudo docker-compose up
+```
