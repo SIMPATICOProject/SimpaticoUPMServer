@@ -1,0 +1,5 @@
+FROM mysql:5.7.21
+
+# import sql file on the first container run
+COPY upm-dump.sql /docker-entrypoint-initdb.d
+
