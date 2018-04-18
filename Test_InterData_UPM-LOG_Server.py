@@ -9,76 +9,437 @@ from struct import pack
 
 def dumpData():
     data = []
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user001"]
+    d = {
+        'type': "lexical", 
+        'original_text': "perch", 
+        'simplified_text': "sit", 
+        'context': "The cat perched no the mat.",
+        'index': "4",
+        'feedback': "0", 
+        'time': "60", 
+        'userID': "user001",
+	}
     data.append(d) 
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user002"]
+    d = {
+        'type': "workflow", 
+        'feedback': "0", 
+        'time': "60", 
+        'userID': "user001",
+	}
     data.append(d)
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user020"]
+    d = {
+        'type': "lexical",
+        'original_text': "perch",
+        'simplified_text': "sit",
+        'context': "The cat perched no the mat.",
+        'index': "4",
+        'feedback': "0",
+        'time': "60",
+        'userID': "user020",
+     }
     data.append(d)
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user030"]
+    d = {
+        'type': "lexical",
+        'original_text': "perch",
+        'simplified_text': "sit",
+        'context': "The cat perched no the mat.",
+        'index': "4",
+        'feedback': "1",
+        'time': "160",
+        'userID': "user030",
+    }
     data.append(d)
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user040"]
+    d = {
+        'type': "lexical",
+        'original_text': "perch",
+        'simplified_text': "sit",
+        'context': "The cat perched no the mat.",
+        'index': "4",
+        'feedback': "0",
+        'time': "60",
+        'userID': "user040",
+    }
     data.append(d)
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user050"]
+    d = {
+        'type': "lexical",
+        'original_text': "perch",
+        'simplified_text': "sit",
+        'context': "The cat perched no the mat.",
+        'index': "4",
+        'feedback': "0",
+        'time': "60",
+        'userID': "user050",
+    }
     data.append(d)
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user060"]
+    d = {
+        'type': "lexical",
+        'original_text': "perch",
+        'simplified_text': "sit",
+        'context': "The cat perched no the mat.",
+        'index': "4",
+        'feedback': "1",
+        'time': "30",
+        'userID': "user060",
+    }
     data.append(d)
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user070"]
+    d = {
+        'type': "lexical",
+        'original_text': "perch",
+        'simplified_text': "sit",
+        'context': "The cat perched no the mat.",
+        'index': "4",
+        'feedback': "0",
+        'time': "60",
+        'userID': "user070",
+    }
     data.append(d)
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user080"]
+    d = {
+        'type': "lexical",
+        'original_text': "perch",
+        'simplified_text': "sit",
+        'context': "The cat perched no the mat.",
+        'index': "4",
+        'feedback': "0",
+        'time': "60",
+        'userID': "user080",
+    }
     data.append(d)
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user090"]
+    d = {
+        'type': "lexical",
+        'original_text': "perch",
+        'simplified_text': "sit",
+        'context': "The cat perched no the mat.",
+        'index': "4",
+        'feedback': "0",
+        'time': "60",
+        'userID': "user090",
+    }
     data.append(d)
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user100"]
+    d = {
+        'type': "lexical",
+        'original_text': "perch",
+        'simplified_text': "sit",
+        'context': "The cat perched no the mat.",
+        'index': "4",
+        'feedback': "0",
+        'time': "60",
+        'userID': "user100",
+    }
     data.append(d)
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user200"]
+    d = {
+        'type': "lexical",
+        'original_text': "perch",
+        'simplified_text': "sit",
+        'context': "The cat perched no the mat.",
+        'index': "4",
+        'feedback': "0",
+        'time': "60",
+        'userID': "user200",
+    }
     data.append(d)
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user300"]
+    d = {
+        'type': "lexical",
+        'original_text': "perch",
+        'simplified_text': "sit",
+        'context': "The cat perched no the mat.",
+        'index': "4",
+        'feedback': "0",
+        'time': "60",
+        'userID': "user300",
+    }
     data.append(d)
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user400"]
+    d = {
+        'type': "lexical",
+        'original_text': "perch",
+        'simplified_text': "sit",
+        'context': "The cat perched no the mat.",
+        'index': "4",
+        'feedback': "1",
+        'time': "55",
+        'userID': "user400",
+    }
     data.append(d)
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user002"]
+    d = {
+        'type': "workflow", 
+        'feedback': "0", 
+        'time': "60", 
+        'userID': "user030",
+	}
     data.append(d)
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user020"]
+    d = {
+        'type': "workflow", 
+        'feedback': "1", 
+        'time': "60", 
+        'userID': "user040",
+	}
     data.append(d)
-    d = ["lexical", "perch", "sit", None, None, 0, 60, "user400"]
+    d = {
+        'type': "workflow", 
+        'feedback': "1", 
+        'time': "55", 
+        'userID': "user050",
+	}
     data.append(d)
-    d = ["workflow", None, None, None, None, 0, 100, "user001"]
+    d = {
+        'type': "workflow", 
+        'feedback': "0", 
+        'time': "60", 
+        'userID': "user060",
+	}
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user002"]
+    d = {
+        'type': "workflow", 
+        'feedback': "0", 
+        'time': "60", 
+        'userID': "user070",
+	}
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user002"]
+    d = {
+        'type': "workflow", 
+        'feedback': "0", 
+        'time': "60", 
+        'userID': "user080",
+	}
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user020"]
+    d = {
+        'type': "workflow", 
+        'feedback': "0", 
+        'time': "60", 
+        'userID': "user090",
+	}
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user030"]
+    d = {
+        'type': "workflow", 
+        'feedback': "0", 
+        'time': "60", 
+        'userID': "user100",
+	}
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user040"]
+    d = {
+        'type': "workflow", 
+        'feedback': "0", 
+        'time': "60", 
+        'userID': "user200",
+	}
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user050"]
+    d = {
+        'type': "workflow", 
+        'feedback': "0", 
+        'time': "60", 
+        'userID': "user300",
+	}
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user060"]
+    d = {
+        'type': "workflow", 
+        'feedback': "1", 
+        'time': "160", 
+        'userID': "user400",
+	}
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user070"]
+    d = {
+        'type': "workflow", 
+        'feedback': "1", 
+        'time': "60", 
+        'userID': "user500",
+	}
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user080"]
+    d = {
+        'type': "syntactic",
+        'original_text': "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.",
+        'simplified_text': "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.",
+        'feedback': "1",
+        'time': "30",
+        'userID': "user060",
+    }
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user090"]
+    d = {
+        'type': "syntactic",
+        'original_text': "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.",
+        'simplified_text': "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.",
+        'feedback': "1",
+        'time': "30",
+        'userID': "user050",
+    }
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user100"]
+    d = {
+        'type': "syntactic",
+        'original_text': "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.",
+        'simplified_text': "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.",
+        'feedback': "1",
+        'time': "30",
+        'userID': "user040",
+    }
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user200"]
+    d = {
+        'type': "syntactic",
+        'original_text': "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.",
+        'simplified_text': "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.",
+        'feedback': "1",
+        'time': "30",
+        'userID': "user030",
+    }
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user300"]
+    d = {
+        'type': "syntactic",
+        'original_text': "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.",
+        'simplified_text': "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.",
+        'feedback': "1",
+        'time': "30",
+        'userID': "user070",
+    }
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user400"]
+    d = {
+        'type': "syntactic",
+        'original_text': "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.",
+        'simplified_text': "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.",
+        'feedback': "1",
+        'time': "30",
+        'userID': "user080",
+    }
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user001"]
+    d = {
+        'type': "syntactic",
+        'original_text': "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.",
+        'simplified_text': "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.",
+        'feedback': "1",
+        'time': "30",
+        'userID': "user090",
+    }
     data.append(d)
-    d = ["syntactic", "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.", "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.", None, None, 1, 200, "user002"]
+    d = {
+        'type': "syntactic",
+        'original_text': "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.",
+        'simplified_text': "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.",
+        'feedback': "0",
+        'time': "130",
+        'userID': "user100",
+    }
     data.append(d)
-    d = ["elaboration", None, None, True, None, 0, 40, "user002"]
+    d = {
+        'type': "syntactic",
+        'original_text': "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.",
+        'simplified_text': "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.",
+        'feedback': "1",
+        'time': "30",
+        'userID': "user200",
+    }
     data.append(d)
+    d = {
+        'type': "syntactic",
+        'original_text': "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.",
+        'simplified_text': "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.",
+        'feedback': "1",
+        'time': "30",
+        'userID': "user300",
+    }
+    data.append(d)
+    d = {
+        'type': "syntactic",
+        'original_text': "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.",
+        'simplified_text': "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.",
+        'feedback': "0",
+        'time': "30",
+        'userID': "user400",
+    }
+    data.append(d)
+    d = {
+        'type': "syntactic",
+        'original_text': "We want to reassure you that we take fire safety very seriously and we are doing everything we can to make sure our residents are safe.",
+        'simplified_text': "We want to make sure people take fire safety very seriously. We are doing everything we can to make sure our people are safe.",
+        'feedback': "0",
+        'time': "30",
+        'userID': "user400",
+    }
+    data.append(d)
+    d = {
+        'type': "elaboration",
+	'type_elab': "image",
+        'feedback': "0",
+        'time': "30",
+        'userID': "user400",
+    }
+    data.append(d)
+    d = {
+        'type': "elaboration",
+	'type_elab': "wikipedia",
+        'feedback': "1",
+        'time': "30",
+        'userID': "user400",
+    }
+    data.append(d)
+    d = {
+        'type': "elaboration",
+	'type_elab': "image",
+        'feedback': "1",
+        'time': "30",
+        'userID': "user500",
+    }
+    data.append(d)
+    d = {
+        'type': "elaboration",
+	'type_elab': "image",
+        'feedback': "1",
+        'time': "30",
+        'userID': "user400",
+    }
+    data.append(d)
+    d = {
+        'type': "elaboration",
+	'type_elab': "wikipedia",
+        'feedback': "0",
+        'time': "30",
+        'userID': "user500",
+    }
+    data.append(d)
+    d = {
+        'type': "elaboration",
+	'type_elab': "image",
+        'feedback': "0",
+        'time': "30",
+        'userID': "user100",
+    }
+    data.append(d)
+    d = {
+        'type': "elaboration",
+	'type_elab': "image",
+        'feedback': "0",
+        'time': "30",
+        'userID': "user200",
+    }
+    data.append(d)
+    d = {
+        'type': "elaboration",
+	'type_elab': "wikipedia",
+        'feedback': "0",
+        'time': "30",
+        'userID': "user300",
+    }
+    data.append(d)
+    d = {
+        'type': "elaboration",
+	'type_elab': "image",
+        'feedback': "0",
+        'time': "30",
+        'userID': "user090",
+    }
+    data.append(d)
+    d = {
+        'type': "elaboration",
+	'type_elab': "wikipedia",
+        'feedback': "0",
+        'time': "30",
+        'userID': "user080",
+    }
+    data.append(d)
+    d = {
+        'type': "elaboration",
+	'type_elab': "image",
+        'feedback': "0",
+        'time': "30",
+        'userID': "user060",
+    }
+    data.append(d)
+    
     return data
 
 

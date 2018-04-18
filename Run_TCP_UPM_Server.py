@@ -137,17 +137,42 @@ def addInteraction(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 		#add demographic data
 		if demoID != -1:
 			cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db) 
-			interaction_data = {
-				'type': data['type'],
-				'original_text': data['original_text'],
-				'simplified_text': data['simplified_text'],
-				'image_request': data['image_request'],
-				'wikipedia_request': data['wikipedia_request'],
-				'feedback': data['feedback'],
-				'time': data['time'],
-				'demoID': demoID,
-			}
-			add_interaction = "INSERT INTO interaction_data (type, original_text, simplified_text, image_request, wikipedia_request, feedback, time, demoID) VALUES (%(type)s, %(original_text)s, %(simplified_text)s, %(image_request)s, %(wikipedia_request)s, %(feedback)s, %(time)s, %(demoID)s)"
+			if data['type'] == "lexical":
+                        	interaction_data = {
+					'original_text': data['original_text'],
+					'simplified_text': data['simplified_text'],
+					'context': data['context'],
+					'index': data['index'],
+					'feedback': data['feedback'],
+					'time': data['time'],
+					'demoID': demoID,
+				}
+			    	add_interaction = "INSERT INTO interaction_data_lexical (original_text, simplified_text, context, index_context, feedback, time, demoID) VALUES (%(original_text)s, %(simplified_text)s, %(context)s, %(index)s, %(feedback)s, %(time)s, %(demoID)s)"
+			elif data['type'] == "syntactic":
+                        	interaction_data = {
+					'original_text': data['original_text'],
+					'simplified_text': data['simplified_text'],
+					'feedback': data['feedback'],
+					'time': data['time'],
+					'demoID': demoID,
+				}
+			    	add_interaction = "INSERT INTO interaction_data_syntactic (original_text, simplified_text, feedback, time, demoID) VALUES (%(original_text)s, %(simplified_text)s, %(feedback)s, %(time)s, %(demoID)s)"
+			elif data['type'] == "elaboration":
+                        	interaction_data = {
+					'type': data['type_elab'],
+					'feedback': data['feedback'],
+					'time': data['time'],
+					'demoID': demoID,
+				}
+			    	add_interaction = "INSERT INTO interaction_data_elaboration (type, feedback, time, demoID) VALUES (%(type)s, %(feedback)s, %(time)s, %(demoID)s)"
+			elif data['type'] == "workflow":
+                        	interaction_data = {
+					'feedback': data['feedback'],
+					'time': data['time'],
+					'demoID': demoID,
+				}
+			    	add_interaction = "INSERT INTO interaction_data_wf (feedback, time, demoID) VALUES (%(feedback)s, %(time)s, %(demoID)s)"
+				
 			cursor = cnx.cursor()
 			cursor.execute(add_interaction, interaction_data)
 			cnx.commit()
@@ -163,6 +188,44 @@ def addInteraction(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 		print "SQLSTATE value:", e.sqlstate
 		print "Error message:", e.msg 
 		output = "ERROR: Interaction data could not be added"
+
+	return output
+
+def sendUserDemoData(mysql_user, mysql_pass, mysql_server, mysql_db, data):
+	"""
+	Send user demographic data 
+	@param mysql_user: MySQL server user
+	@param mysql_pass: MySQL server user's password
+	@param mysql_server: MySQL server host
+	@param mysql_db: UPM database name
+	@param data: user for which the profile will be searched
+	@return demographic data or an error message
+	"""
+	
+	try:
+		userID = data['userID']
+
+		#connection to the MySQL database
+		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
+
+		query = "SELECT * FROM demographic_data WHERE userID = '%s'" % userID
+		cursor = cnx.cursor()
+		cursor.execute(query)
+		
+		demographic_data = None
+		for c in cursor:
+			demographic_data = c
+
+		demo_json = {'demo_data': demographic_data}
+
+		#Return data:
+		output = json.dumps(demo_json)
+
+	except mysql.connector.Error as e:
+		print "Error code: ", e.errno
+		print "SQLSTATE value:", e.sqlstate
+		print "Error message:", e.msg 
+		output = "ERROR: Query could not be processed"
 
 	return output
 
@@ -216,7 +279,7 @@ def sendUserProfile(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 		print "Error code: ", e.errno
 		print "SQLSTATE value:", e.sqlstate
 		print "Error message:", e.msg 
-		output = "ERROR: Interaction data could not be added"
+		output = "ERROR: Query could not be processed"
 
 	return output
 	
@@ -228,7 +291,7 @@ def sendUserInteractionData(mysql_user, mysql_pass, mysql_server, mysql_db, data
 	@param mysql_server: MySQL server host
 	@param mysql_db: UPM database name
 	@param data: user for which the profile will be searched
-	@return user profile or an error message
+	@return interaction data or an error message
 	"""
 
 	try:
@@ -241,24 +304,45 @@ def sendUserInteractionData(mysql_user, mysql_pass, mysql_server, mysql_db, data
 		
 		#Connect to the MySQL database:
 		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
-		
-		#Create sql query:
-		if inter_type:
-			query = "SELECT ID.* FROM interaction_data as ID INNER JOIN demographic_data as DD ON ID.demoID=DD.demoID WHERE DD.userID='%s' and ID.type='%s'" % (userID, inter_type)
-		else:
-			query = "SELECT ID.* FROM interaction_data as ID INNER JOIN demographic_data as DD ON ID.demoID=DD.demoID WHERE DD.userID='%s'" % userID
-		
-		#Execute query:
+
+		query = "SELECT demoID FROM demographic_data WHERE userID = '%s'" % userID
 		cursor = cnx.cursor()
 		cursor.execute(query)
-		interaction_data = []
+		demoID = -1
 		for c in cursor:
-			interaction_data.append(c)
-		inter_json = {'inter_data': interaction_data}
+			demoID = int(c[0])
+		cnx.close()
 
-		#Return data:
-		output = json.dumps(inter_json)
+		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
 		
+		if demoID != -1:	
+			#Create sql query:
+			if inter_type:
+				if inter_type == "lexical":
+					query = "SELECT * FROM interaction_data_lexical WHERE demoID='%s'" % (demoID)
+				elif inter_type == "syntactic":
+					query = "SELECT * FROM interaction_data_syntactic WHERE demoID='%s'" % (demoID)
+				elif inter_type == "elaboration":
+					query = "SELECT * FROM interaction_data_elaboration WHERE demoID='%s'" % (demoID)
+				elif inter_type == "workflow":
+					query = "SELECT * FROM interaction_data_wf WHERE demoID='%s'" % (demoID)
+
+			else:
+				query = "SELECT * FROM interaction_data_lexical as ID CROSS JOIN interaction_data_syntactic as IDS ON ID.demoID=IDS.demoID CROSS JOIN interaction_data_elaboration as IDE ON ID.demoID=IDE.demoID CROSS JOIN interaction_data_wf as IDW ON ID.demoID=IDW.demoID WHERE ID.demoID='%s'" % demoID
+		
+			#Execute query:
+			cursor = cnx.cursor()
+			cursor.execute(query)
+			interaction_data = []
+			for c in cursor:
+				interaction_data.append(c)
+			inter_json = {'inter_data': interaction_data}
+
+			#Return data:
+			output = json.dumps(inter_json)
+		else:
+			output = "ERROR: User %s does not exist!" % userID
+
 	except mysql.connector.Error as e:
 		print "Error code: ", e.errno
 		print "SQLSTATE value:", e.sqlstate
@@ -391,22 +475,28 @@ def processRequest(configurations):
 			conn.sendall(b'\00')
 			inter_data = json.loads(data)['inter_data']
 			for i in inter_data:
-			   data_aux = {}
-			   l = list(i)
-			   data_aux['type'] = l[0]
-			   data_aux['original_text'] = l[1]
-			   data_aux['simplified_text'] = l[2]
-			   data_aux['image_request'] = l[3]
-			   data_aux['wikipedia_request'] = l[4]
-			   data_aux['feedback'] = l[5]
-			   data_aux['time'] = l[6]
-			   data_aux['userID'] = l[7]
-			   output = addInteraction(mysql_user, mysql_pass, mysql_server, mysql_db, data_aux)
+				data_aux = {}
+			   	l = dict(i) 
+				#if l['type'] == "lexical":
+			   	#data_aux['type'] = l['type']
+			   	#data_aux['original_text'] = l['original_text']
+			   	#data_aux['simplified_text'] = l['simplified_text']
+			   	#data_aux['image_request'] = l['context']
+			   	#data_aux['index'] = l['index']
+			   	#data_aux['feedback'] = l[5]
+			   	#data_aux['time'] = l[6]
+			   	#data_aux['userID'] = l[7]
+			   	output = addInteraction(mysql_user, mysql_pass, mysql_server, mysql_db, l)
  
 		#Retrieve user profile 
 		elif request_type == "request_up": 
 		   print "*** Request type: request user profile"
 		   output = sendUserProfile(mysql_user, mysql_pass, mysql_server, mysql_db, data)
+		
+		#Retrieve user demographic data 
+		elif request_type == "request_demo_data": 
+		   print "*** Request type: request user demographic data"
+		   output = sendUserDemoData(mysql_user, mysql_pass, mysql_server, mysql_db, data)
 		   
 		#Retrieve user interaction data 
 		elif request_type == "request_inter_data": 
@@ -420,14 +510,14 @@ def processRequest(configurations):
 		   output = sendUserProfileSQL(mysql_user, mysql_pass, mysql_server, mysql_db, data)
 																
 		#Send result if the request is not a SQL query
-		if request_type != "request_up_sql":
+		if request_type != "request_up_sql" and request_type != "request_inter_data":
 		   print "Sending... " + str(output)
 		   conn.send(output)
 		   conn.close()
 		
 		#Send result in batches if the request is a SQL query
 		else:
-		   print "Sending data in batches..."
+  		   print "Sending data in batches..."
 		   length = pack('>Q', len(output))
 		   conn.sendall(length)
 		   conn.sendall(output)
@@ -476,8 +566,8 @@ t1 = threading.Thread(name='listening', target=processRequest, args = (configura
 t1.start()
 
 #Create secondary thread that requests data from the LOG every 24h
-#t2 = threading.Thread(name='requesting', target=requestInterData, args = (configurations,))
-#t2.start()
+t2 = threading.Thread(name='requesting', target=requestInterData, args = (configurations,))
+t2.start()
 
 
 	

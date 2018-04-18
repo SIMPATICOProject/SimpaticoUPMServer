@@ -27,7 +27,7 @@ configurations = loadResources('configurations.txt')
 
 info = {}
 info['request_type'] = "request_up_sql"
-info['query'] = "SELECT * FROM demographic_data INNER JOIN interaction_data ON demographic_data.demoID = interaction_data.demoID WHERE demographic_data.userID = 'user001'"
+info['query'] = "SELECT * FROM demographic_data INNER JOIN interaction_data_lexical ON demographic_data.demoID = interaction_data_lexical.demoID INNER JOIN interaction_data_syntactic ON demographic_data.demoID = interaction_data_syntactic.demoID INNER JOIN interaction_data_wf ON demographic_data.demoID = interaction_data_wf.demoID INNER JOIN interaction_data_elaboration ON demographic_data.demoID = interaction_data_elaboration.demoID WHERE demographic_data.userID = 'user1010'"
 
 data = json.dumps(info)
 

@@ -18,6 +18,7 @@
 DROP DATABASE IF EXISTS `upm`;
 CREATE DATABASE `upm`;
 USE `upm`;
+
 --
 -- Table structure for table `country`
 --
@@ -38,7 +39,7 @@ CREATE TABLE `country` (
 
 LOCK TABLES `country` WRITE;
 /*!40000 ALTER TABLE `country` DISABLE KEYS */;
-INSERT INTO `country` VALUES (1,'Brazil'),(2,'United Kingdom'),(3,'Spain'),(4,'Italy'),(5,'other');
+INSERT INTO `country` VALUES (1,'Brazil'),(2,'United Kingdom'),(3,'Spain'),(4,'Italy'),(5,'Other');
 /*!40000 ALTER TABLE `country` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,28 +80,85 @@ INSERT INTO `demographic_data` VALUES (1,30,1,'C1','postgraduate',NULL,'intermed
 UNLOCK TABLES;
 
 --
--- Table structure for table `interaction_data`
+-- Table structure for table `interaction_data_elaboration`
 --
 
-DROP TABLE IF EXISTS `interaction_data`;
+DROP TABLE IF EXISTS `interaction_data_elaboration`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `interaction_data` (
+CREATE TABLE `interaction_data_elaboration` (
   `interactionID` bigint(20) NOT NULL AUTO_INCREMENT,
-  `type` enum('lexical','syntactic','workflow','elaboration') NOT NULL,
-  `original_text` varchar(500) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
-  `simplified_text` varchar(500) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
-  `image_request` tinyint(4) DEFAULT NULL,
-  `wikipedia_request` tinyint(4) DEFAULT NULL,
+  `type` enum('image','wikipedia') NOT NULL,
   `feedback` tinyint(4) DEFAULT NULL,
   `time` int(11) DEFAULT NULL,
   `demoID` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`interactionID`),
-  KEY `fk_interaction_data_demo_idx` (`demoID`),
-  CONSTRAINT `fk_interaction_data_demo` FOREIGN KEY (`demoID`) REFERENCES `demographic_data` (`demoID`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `fk_interaction_data_elaboration_demo_idx` (`demoID`),
+  CONSTRAINT `fk_interaction_data_elaboration_demo` FOREIGN KEY (`demoID`) REFERENCES `demographic_data` (`demoID`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Table structure for table `interaction_data_wf`
+--
+
+DROP TABLE IF EXISTS `interaction_data_wf`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `interaction_data_wf` (
+  `interactionID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `feedback` tinyint(4) DEFAULT NULL,
+  `time` int(11) DEFAULT NULL,
+  `demoID` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`interactionID`),
+  KEY `fk_interaction_data_wf_demo_idx` (`demoID`),
+  CONSTRAINT `fk_interaction_data_wf_demo` FOREIGN KEY (`demoID`) REFERENCES `demographic_data` (`demoID`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+
+--
+-- Table structure for table `interaction_data_syntactic`
+--
+
+DROP TABLE IF EXISTS `interaction_data_syntactic`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `interaction_data_syntactic` (
+  `interactionID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `original_text` varchar(500) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `simplified_text` varchar(500) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `feedback` tinyint(4) DEFAULT NULL,
+  `time` int(11) DEFAULT NULL,
+  `demoID` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`interactionID`),
+  KEY `fk_interaction_data_syntactic_demo_idx` (`demoID`),
+  CONSTRAINT `fk_interaction_data_syntactic_demo` FOREIGN KEY (`demoID`) REFERENCES `demographic_data` (`demoID`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+
+--
+-- Table structure for table `interaction_data_lexical`
+--
+
+DROP TABLE IF EXISTS `interaction_data_lexical`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `interaction_data_lexical` (
+  `interactionID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `original_text` varchar(500) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `simplified_text` varchar(500) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `context` varchar(500) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `index_context` varchar(20) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `feedback` tinyint(4) DEFAULT NULL,
+  `time` int(11) DEFAULT NULL,
+  `demoID` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`interactionID`),
+  KEY `fk_interaction_data_lexical_demo_idx` (`demoID`),
+  CONSTRAINT `fk_interaction_data_lexical_demo` FOREIGN KEY (`demoID`) REFERENCES `demographic_data` (`demoID`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 
 --
