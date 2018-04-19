@@ -34,6 +34,47 @@ s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 s.connect(("localhost",int(configurations['upm_local_server_port'])))
 
+print('Requesting demographic data for user: ' + info['userID'])
+print('Sending...')
+s.send(data+'\n')
+print('Receiving...')
+resp = json.loads(s.recv(1024).decode("utf-8"))
+print "Demographic Data: %s" % resp['demo_data']
+print
+s.close()
+
+
+info = {}
+info['request_type'] = "request_demo_data"
+info['userID'] = "user001"
+
+data = json.dumps(info)
+
+s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+
+s.connect(("localhost",int(configurations['upm_local_server_port'])))
+
+print('Requesting demographic data for user: ' + info['userID'])
+print('Sending...')
+s.send(data+'\n')
+print('Receiving...')
+resp = json.loads(s.recv(1024).decode("utf-8"))
+print "Demographic Data: %s" % resp['demo_data']
+print
+s.close()
+
+
+info = {}
+info['request_type'] = "request_demo_data"
+info['userID'] = "user400"
+
+data = json.dumps(info)
+
+s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+
+s.connect(("localhost",int(configurations['upm_local_server_port'])))
+
+print('Requesting demographic data for user: ' + info['userID'])
 print('Sending...')
 s.send(data+'\n')
 print('Receiving...')

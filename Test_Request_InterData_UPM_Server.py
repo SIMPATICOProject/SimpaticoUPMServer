@@ -38,7 +38,7 @@ s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 s.connect(("localhost",int(configurations['upm_local_server_port'])))
 
-print('*** Requesting ' + info['inter_type'] + ' data ***')
+print('*** Requesting ' + info['inter_type'] + ' data from user ' + info['userID'] + '***')
 print('Sending...')
 s.send(data+'\n')
 
@@ -77,7 +77,7 @@ s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 s.connect(("localhost",int(configurations['upm_local_server_port'])))
 
-print('*** Requesting ' + info['inter_type'] + ' data ***')
+print('*** Requesting ' + info['inter_type'] + ' data from user ' + info['userID'] + '***')
 print('Sending...')
 s.send(data+'\n')
 
@@ -116,7 +116,7 @@ s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 s.connect(("localhost",int(configurations['upm_local_server_port'])))
 
-print('*** Requesting ' + info['inter_type'] + ' data ***')
+print('*** Requesting ' + info['inter_type'] + ' data from user ' + info['userID'] + '***')
 print('Sending...')
 s.send(data+'\n')
 
@@ -155,7 +155,7 @@ s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 s.connect(("localhost",int(configurations['upm_local_server_port'])))
 
-print('*** Requesting ' + info['inter_type'] + ' data ***')
+print('*** Requesting ' + info['inter_type'] + ' data from user ' + info['userID'] + '***')
 print('Sending...')
 s.send(data+'\n')
 
