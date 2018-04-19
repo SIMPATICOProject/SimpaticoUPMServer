@@ -28,6 +28,8 @@ configurations = loadResources('configurations.txt')
 info = {}
 info['request_type'] = "request_inter_data"
 info['userID'] = "user1010"
+
+# types can be syntactic, lexical, elaboration or workflow
 info['inter_type'] = "syntactic"
 
 data = json.dumps(info)
@@ -36,6 +38,124 @@ s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 s.connect(("localhost",int(configurations['upm_local_server_port'])))
 
+print('*** Requesting ' + info['inter_type'] + ' data ***')
+print('Sending...')
+s.send(data+'\n')
+
+print('Receiving data in batches...')
+bs = s.recv(8)
+(length,) = unpack('>Q', bs)
+data = b''
+c = 1
+while len(data) < length:
+    print('Receiving batch %d ...' % c)
+    to_read = length - len(data)
+    data += s.recv(4096 if to_read > 4096 else to_read)
+    c += 1
+assert len(b'\00') == 1
+s.sendall(b'\00')
+profile = json.loads(data)['inter_data']
+
+for p in profile:
+    print p
+
+#for r in resp["profile"]: 
+#    print r
+print
+s.close()
+
+info = {}
+info['request_type'] = "request_inter_data"
+info['userID'] = "user1010"
+
+# types can be syntactic, lexical, elaboration or workflow
+info['inter_type'] = "elaboration"
+
+data = json.dumps(info)
+
+s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+
+s.connect(("localhost",int(configurations['upm_local_server_port'])))
+
+print('*** Requesting ' + info['inter_type'] + ' data ***')
+print('Sending...')
+s.send(data+'\n')
+
+print('Receiving data in batches...')
+bs = s.recv(8)
+(length,) = unpack('>Q', bs)
+data = b''
+c = 1
+while len(data) < length:
+    print('Receiving batch %d ...' % c)
+    to_read = length - len(data)
+    data += s.recv(4096 if to_read > 4096 else to_read)
+    c += 1
+assert len(b'\00') == 1
+s.sendall(b'\00')
+profile = json.loads(data)['inter_data']
+
+for p in profile:
+    print p
+
+#for r in resp["profile"]: 
+#    print r
+print
+s.close()
+
+info = {}
+info['request_type'] = "request_inter_data"
+info['userID'] = "user1010"
+
+# types can be syntactic, lexical, elaboration or workflow
+info['inter_type'] = "lexical"
+
+data = json.dumps(info)
+
+s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+
+s.connect(("localhost",int(configurations['upm_local_server_port'])))
+
+print('*** Requesting ' + info['inter_type'] + ' data ***')
+print('Sending...')
+s.send(data+'\n')
+
+print('Receiving data in batches...')
+bs = s.recv(8)
+(length,) = unpack('>Q', bs)
+data = b''
+c = 1
+while len(data) < length:
+    print('Receiving batch %d ...' % c)
+    to_read = length - len(data)
+    data += s.recv(4096 if to_read > 4096 else to_read)
+    c += 1
+assert len(b'\00') == 1
+s.sendall(b'\00')
+profile = json.loads(data)['inter_data']
+
+for p in profile:
+    print p
+
+#for r in resp["profile"]: 
+#    print r
+print
+s.close()
+
+info = {}
+info['request_type'] = "request_inter_data"
+info['userID'] = "user1010"
+
+# types can be syntactic, lexical, elaboration or workflow
+info['inter_type'] = "workflow"
+
+data = json.dumps(info)
+
+s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+
+s.connect(("localhost",int(configurations['upm_local_server_port'])))
+
+print('*** Requesting ' + info['inter_type'] + ' data ***')
 print('Sending...')
 s.send(data+'\n')
 
