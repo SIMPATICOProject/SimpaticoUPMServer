@@ -121,6 +121,8 @@ def addInteraction(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 	@return success or fail/error message
 	"""
 	try:
+		output = ""
+
 		#connection to the MySQL database
 		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
 
@@ -134,7 +136,33 @@ def addInteraction(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 			demoID = int(c[0])
 		cnx.close()
 
-		#add demographic data
+
+		if demoID == -1:
+			cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
+                	demo_data = {
+                        	'age': None,
+                        	'country_birth': None,
+                        	'proficiency': None,
+                        	'educational_level': None,
+                        	'disability': None,
+                        	'familiarity_PA': None,
+                        	'occupation': None,
+                        	'userID': data['userID'],
+                	}
+			output = "WARNING: %s is not registered in the demographic_data table! An empty entry for this user was added in demographic_data table.\n" % userID
+			add_demographic = "INSERT INTO demographic_data (age, country_birth, proficiency, educational_level, disability, familiarity_PA, occupation, userID) VALUES (%(age)s, %(country_birth)s, %(proficiency)s, %(educational_level)s, %(disability)s, %(familiarity_PA)s, %(occupation)s, %(userID)s)"
+			cursor = cnx.cursor()
+                	cursor.execute(add_demographic, demo_data)
+                	cnx.commit()
+
+                	query = "SELECT demoID FROM demographic_data WHERE userID = '%s'" % data['userID']
+                	cursor.execute(query)
+                	demoID = -1
+                	for c in cursor:
+                        	demoID = int(c[0])
+                	cnx.close()
+
+		#add interaction data
 		if demoID != -1:
 			cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db) 
 			if data['type'] == "lexical":
@@ -178,10 +206,10 @@ def addInteraction(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 			cnx.commit()
 			cnx.close()
 			#success output
-			output = "Interaction data added"
+			output += "Interaction data added"
 
 		else: 
-			output = "ERROR: %s is not registered in the demographic_data table" % userID
+			output = "ERROR: %s is not registered in the demographic_data table!" % userID
 
 	except mysql.connector.Error as e:
 		print "Error code: ", e.errno
