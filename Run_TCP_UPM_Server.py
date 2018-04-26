@@ -19,6 +19,8 @@ def addDemographic(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 	@return success or fail/error message
 	"""
 	try:
+		output = ""	
+	
 		#connection to the MySQL database
 		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
 
@@ -39,31 +41,56 @@ def addDemographic(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 				countryID = int(c[0])
 		cnx.close()
 
-		#insert demographic data into the table 'demographic_data'
-		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db) 
-		demo_data = {
-			'age': data['age'],
-			'country_birth': countryID,
-			'proficiency': data['proficiency'],
-			'educational_level': data['educational_level'],
-			'disability': data['disability'],
-			'familiarity_PA': data['familiarity_PA'],
-			'occupation': data['occupation'],
-			'userID': data['userID'],
-		}
-		add_demographic = "INSERT INTO demographic_data (age, country_birth, proficiency, educational_level, disability, familiarity_PA, occupation, userID) VALUES (%(age)s, %(country_birth)s, %(proficiency)s, %(educational_level)s, %(disability)s, %(familiarity_PA)s, %(occupation)s, %(userID)s)"
+		#check if user is already registered
+		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
 		cursor = cnx.cursor()
-		cursor.execute(add_demographic, demo_data)
-		cnx.commit()
-
-		#insert the native languages spoken by the user in the 'native_language' table
 		query = "SELECT demoID FROM demographic_data WHERE userID = '%s'" % data['userID']
 		cursor.execute(query)
 		demoID = -1
 		for c in cursor:   
 			demoID = int(c[0])
 		cnx.close()
+
+		if (demoID == -1):
 		
+			#insert demographic data into the table 'demographic_data'
+			cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
+			demo_data = {
+				'age': data['age'],
+				'country_birth': countryID,
+				'proficiency': data['proficiency'],
+				'educational_level': data['educational_level'],
+				'disability': data['disability'],
+				'familiarity_PA': data['familiarity_PA'],
+				'occupation': data['occupation'],
+				'userID': data['userID'],
+			}
+			add_demographic = "INSERT INTO demographic_data (age, country_birth, proficiency, educational_level, disability, familiarity_PA, occupation, userID) VALUES (%(age)s, %(country_birth)s, %(proficiency)s, %(educational_level)s, %(disability)s, %(familiarity_PA)s, %(occupation)s, %(userID)s)"
+			cursor = cnx.cursor()
+			cursor.execute(add_demographic, demo_data)
+			cnx.commit()
+		else:
+
+			#update demographic data into the table 'demographic_data'
+			cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
+			demo_data = {
+				'age': data['age'],
+				'country_birth': countryID,
+				'proficiency': data['proficiency'],
+				'educational_level': data['educational_level'],
+				'disability': data['disability'],
+				'familiarity_PA': data['familiarity_PA'],
+				'occupation': data['occupation'],
+				'userID': data['userID'],
+			}
+			update_demographic = "UPDATE demographic_data SET age = %(age)s, country_birth = %(country_birth)s, proficiency = %(proficiency)s, educational_level = %(educational_level)s, disability = %(disability)s, familiarity_PA = %(familiarity_PA)s, occupation = %(occupation)s WHERE userID =  %(userID)s"
+			cursor = cnx.cursor()
+			cursor.execute(update_demographic, demo_data)
+			cnx.commit()
+			output = "WARNING: User is already registered! Demographic data will be updated!\n"
+		
+
+		#insert the native languages spoken by the user in the 'native_language' table
 		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
 		cursor = cnx.cursor()
 		
@@ -98,7 +125,7 @@ def addDemographic(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 		cnx.close()
 
 		#success output  
-		output = "Demographic data added"
+		output += "Demographic data added"
 
 
 	except mysql.connector.Error as e:
