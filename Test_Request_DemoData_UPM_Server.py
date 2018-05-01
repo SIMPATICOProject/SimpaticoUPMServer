@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: latin-1 -*-
 """
 Example code that request the user profile of a given user
 """
@@ -39,7 +41,8 @@ print('Sending...')
 s.send(data+'\n')
 print('Receiving...')
 resp = json.loads(s.recv(1024).decode("utf-8"))
-print "Demographic Data: %s" % resp['demo_data']
+print "Demographic Data:" 
+print resp
 print
 s.close()
 
@@ -59,7 +62,8 @@ print('Sending...')
 s.send(data+'\n')
 print('Receiving...')
 resp = json.loads(s.recv(1024).decode("utf-8"))
-print "Demographic Data: %s" % resp['demo_data']
+print "Demographic Data:"
+print resp
 print
 s.close()
 
@@ -78,7 +82,9 @@ print('Requesting demographic data for user: ' + info['userID'])
 print('Sending...')
 s.send(data+'\n')
 print('Receiving...')
-resp = json.loads(s.recv(1024).decode("utf-8"))
-print "Demographic Data: %s" % resp['demo_data']
+resp = json.loads(s.recv(1024).decode("latin-1"))
+print "Demographic Data:"
+print resp
+
 print
 s.close()
