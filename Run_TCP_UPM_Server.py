@@ -91,11 +91,24 @@ def addDemographic(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 		
 
 		#insert the native languages spoken by the user in the 'native_language' table
+
+		#finding demoID from user
 		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
 		cursor = cnx.cursor()
+		query = "SELECT demoID FROM demographic_data WHERE userID = '%s'" % data['userID']
+		cursor.execute(query)
+		demoID = -1
+		for c in cursor:   
+			demoID = int(c[0])
+		cnx.close()
 		
+		
+		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
+		cursor = cnx.cursor()
+
 		#first check if the languages informed are registered in the table 'language', if not 'other' is used
 		languages = data['languages']
+		print languages
 		for l in languages:
 			query = "SELECT languageID FROM languages WHERE lower(language) = lower('%s')" % l
 			cursor.execute(query)
@@ -263,18 +276,46 @@ def sendUserDemoData(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 		#connection to the MySQL database
 		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
 
-		query = "SELECT * FROM demographic_data WHERE userID = '%s'" % userID
+		query = "SELECT d.userID, d.age, d.country_birth, d.proficiency, d.educational_level, d.disability, d.familiarity_PA, d.occupation, c.country, l.language FROM demographic_data as `d` INNER JOIN country as `c` ON d.country_birth = c.countryID INNER JOIN native_languages as `n` ON d.demoID = n.userID INNER JOIN languages as `l` ON n.native_language = l.languageID  WHERE d.userID = '%s'" % userID
 		cursor = cnx.cursor()
 		cursor.execute(query)
 		
-		demographic_data = None
+		demographic_data = []
 		for c in cursor:
-			demographic_data = c
+			demographic_data.append(c)
 
-		demo_json = {'demo_data': demographic_data}
+		print demographic_data
+
+		age = proficiency = educational_level = disability = familiarity_PA = occupation = country = ""
+		languages = []
+
+		for demo in demographic_data:
+			age = demo[1]
+			proficiency = demo[3]
+			educational_level = demo[4]
+			disability = demo[5]
+			familiariaty_PA = demo[6]
+			occupation = demo[7]
+			country = demo[8]
+			languages.append(demo[9])
+		
+		send_demo = {
+			'userID': userID,
+			'age': age,
+			'proficiency': proficiency,
+			'educational_level': educational_level,
+			'disability': disability,
+			'familiarity_PA': familiarity_PA,
+			'occupation': occupation,
+			'country': country,
+			'languages': languages,
+		}
+			
+
+		#demo_json = {send_demo}
 
 		#Return data:
-		output = json.dumps(demo_json)
+		output = json.dumps(send_demo)
 
 	except mysql.connector.Error as e:
 		print "Error code: ", e.errno
