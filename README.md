@@ -9,7 +9,9 @@ UPM Server implementation
 
 ## Files
 - configurations.txt: configuration file with servers names, addresses and ports
-- upm-dump.sql: dump of the MySQL UPM database
+- upm-dump.sql: dump of the MySQL UPM database for English
+- upm-dump-es.sql: dump of the MySQL UPM database for Spanish
+- upm-dump-it.sql: dump of the MySQL UPM database for Italian
 - Run_TCP_UPM_Server.py: main UPM server
 - Test_DemoData_UPM_Server.py: test adding demographic data into UPM database (simulates interaction with IFE)
 - Test_InterData_UPM_Server.py: test adding adaptation data into UPM database (simulates interaction with LOG - single entry)
