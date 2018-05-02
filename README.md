@@ -9,6 +9,7 @@ UPM Server implementation
 
 ## Files
 - Configuration:
+
 `configurations.txt`: configuration file with servers names, addresses and ports (database options: `upm` - English database; `upm-es` - Spanish database; `upm-it` - Italian database)
 
 - upm-dump.sql: dump of the MySQL UPM database for English
