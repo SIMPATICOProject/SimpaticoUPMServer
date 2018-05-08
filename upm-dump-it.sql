@@ -55,9 +55,9 @@ CREATE TABLE `demographic_data` (
   `age` int(11) DEFAULT NULL,
   `country_birth` int(11) DEFAULT NULL,
   `proficiency` enum('A1','A2','B1','B2','C1','C2') DEFAULT NULL,
-  `educational_level` enum('elementare','media','universitario','postlaurea') DEFAULT NULL,
-  `disability` set('fisica','visiva','uditiva','mentale','intellettuale','apprendimento') DEFAULT NULL,
-  `familiarity_PA` enum('di base','intermedio','avanzato') DEFAULT NULL,
+  `educational_level` enum('licenza elementare','licenza media','diploma','laurea', 'master/dottorato') DEFAULT NULL,
+  `disability` set('fisica','visiva','uditiva','mentale','intellettiva','di apprendimento') DEFAULT NULL,
+  `familiarity_PA` enum('base','intermedia','avanzata') DEFAULT NULL,
   `userID` varchar(45) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
   `occupation` int(11) DEFAULT NULL,
   PRIMARY KEY (`demoID`),
@@ -75,11 +75,11 @@ CREATE TABLE `demographic_data` (
 
 LOCK TABLES `demographic_data` WRITE;
 /*!40000 ALTER TABLE `demographic_data` DISABLE KEYS */;
-INSERT INTO `demographic_data` VALUES (1,30,1,'C1','postlaurea',NULL,'intermedio','user001',NULL),(2,27,2,'C2','universitario',NULL,'intermedio','user002',NULL),
-(7,21,1,'A1','media',NULL,'di base','user020',NULL),(9,21,1,'A1','media',NULL,NULL,'user030',NULL),(11,50,3,'C1','universitario',NULL,NULL,'user040',NULL),
-(12,50,3,'C1','universitario',NULL,NULL,'user050',NULL),(13,50,1,'C1','universitario',NULL,NULL,'user060',NULL),(15,50,1,'C1','universitario',NULL,NULL,'user070',NULL),
-(16,50,1,'C1','universitario',NULL,NULL,'user080',NULL),(18,50,5,'C1','universitario',NULL,NULL,'user090',NULL),(19,50,5,'C1','universitario',NULL,NULL,'user100',NULL),
-(20,40,5,'C2','postlaurea',NULL,NULL,'user200',NULL),(21,40,5,'C2','postlaurea',NULL,NULL,'user300',NULL),(22,40,5,'C2','postlaurea',NULL,NULL,'user400',NULL);
+INSERT INTO `demographic_data` VALUES (1,30,1,'C1','laurea',NULL,'intermedia','user001',NULL),(2,27,2,'C2','diploma',NULL,'intermedia','user002',NULL),
+(7,21,1,'A1','licenza media',NULL,'base','user020',NULL),(9,21,1,'A1','licenza media',NULL,NULL,'user030',NULL),(11,50,3,'C1','diploma',NULL,NULL,'user040',NULL),
+(12,50,3,'C1','laurea',NULL,NULL,'user050',NULL),(13,50,1,'C1','laurea',NULL,NULL,'user060',NULL),(15,50,1,'C1','master/dottorato',NULL,NULL,'user070',NULL),
+(16,50,1,'C1','diploma',NULL,NULL,'user080',NULL),(18,50,5,'C1','laurea',NULL,NULL,'user090',NULL),(19,50,5,'C1','diploma',NULL,NULL,'user100',NULL),
+(20,40,5,'C2','master/dottorato',NULL,NULL,'user200',NULL),(21,40,5,'C2','laurea',NULL,NULL,'user300',NULL),(22,40,5,'C2','laurea',NULL,NULL,'user400',NULL);
 /*!40000 ALTER TABLE `demographic_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
