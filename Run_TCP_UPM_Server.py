@@ -704,8 +704,8 @@ def processRequest(configurations):
 	port = int(configurations['upm_local_server_port'])
 	mysql_server = configurations['mysql_local_server_host']
 	mysql_user = configurations['mysql_local_server_user']
-	#mysql_pass = configurations['mysql_local_server_pass']
-	mysql_pass = ''
+	mysql_pass = configurations['mysql_local_server_pass']
+	#mysql_pass = ''
 	mysql_db = configurations['upm_database_name']
 
 	#Wait for requests:
