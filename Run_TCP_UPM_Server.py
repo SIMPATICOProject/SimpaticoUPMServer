@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
+
 import socket
 import json
 import sys
@@ -50,8 +51,11 @@ def addDemographic(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 		for c in cursor:   
 			demoID = int(c[0])
 		cnx.close()
+		
+		if data['disability'].strip() == "":
+				data['disability'] = None
 
-		if (demoID == -1):
+		if (demoID == -1):		
 		
 			#insert demographic data into the table 'demographic_data'
 			cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
@@ -293,7 +297,10 @@ def sendUserDemoData(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 			age = demo[1]
 			proficiency = demo[3]
 			educational_level = demo[4]
-			disability = demo[5]
+			if demo[5] != None:
+				disability = list(demo[5])
+			else:
+				disability = None;
 			familiariaty_PA = demo[6]
 			occupation = demo[7]
 			country = demo[8]
@@ -316,6 +323,43 @@ def sendUserDemoData(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 
 		#Return data:
 		output = json.dumps(send_demo)
+
+	except mysql.connector.Error as e:
+		print "Error code: ", e.errno
+		print "SQLSTATE value:", e.sqlstate
+		print "Error message:", e.msg 
+		output = "ERROR: Query could not be processed"
+
+	return output
+	
+def sendUserDemoDataAll(mysql_user, mysql_pass, mysql_server, mysql_db, data):
+	"""
+	Send user demographic data (from all users)
+	@param mysql_user: MySQL server user
+	@param mysql_pass: MySQL server user's password
+	@param mysql_server: MySQL server host
+	@param mysql_db: UPM database name
+	@param data: user for which the profile will be searched
+	@return demographic data or an error message
+	"""
+	
+	try:
+
+		#connection to the MySQL database
+		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
+
+		query = "SELECT d.demoID, d.userID, d.age, d.country_birth, d.proficiency, d.educational_level, d.disability, d.familiarity_PA, d.occupation, c.country, l.language FROM demographic_data as `d` INNER JOIN country as `c` ON d.country_birth = c.countryID INNER JOIN native_languages as `n` ON d.demoID = n.userID INNER JOIN languages as `l` ON n.native_language = l.languageID"
+		cursor = cnx.cursor()
+		cursor.execute(query)
+		
+		demographic_data = []
+		for c in cursor:
+			demographic_data.append(c)
+
+		demo_json = {'demo_data_all': demographic_data}
+
+		#Return data:
+		output = json.dumps(demo_json)
 
 	except mysql.connector.Error as e:
 		print "Error code: ", e.errno
@@ -413,15 +457,14 @@ def sendUserInteractionData(mysql_user, mysql_pass, mysql_server, mysql_db, data
 		
 		if demoID != -1:	
 			#Create sql query:
-			if inter_type:
-				if inter_type == "lexical":
-					query = "SELECT * FROM interaction_data_lexical WHERE demoID='%s'" % (demoID)
-				elif inter_type == "syntactic":
-					query = "SELECT * FROM interaction_data_syntactic WHERE demoID='%s'" % (demoID)
-				elif inter_type == "elaboration":
-					query = "SELECT * FROM interaction_data_elaboration WHERE demoID='%s'" % (demoID)
-				elif inter_type == "workflow":
-					query = "SELECT * FROM interaction_data_wf WHERE demoID='%s'" % (demoID)
+			if inter_type == "lexical":
+				query = "SELECT * FROM interaction_data_lexical WHERE demoID='%s'" % (demoID)
+			elif inter_type == "syntactic":
+				query = "SELECT * FROM interaction_data_syntactic WHERE demoID='%s'" % (demoID)
+			elif inter_type == "elaboration":
+				query = "SELECT * FROM interaction_data_elaboration WHERE demoID='%s'" % (demoID)
+			elif inter_type == "workflow":
+				query = "SELECT * FROM interaction_data_wf WHERE demoID='%s'" % (demoID)
 
 			else:
 				query = "SELECT * FROM interaction_data_lexical as ID CROSS JOIN interaction_data_syntactic as IDS ON ID.demoID=IDS.demoID CROSS JOIN interaction_data_elaboration as IDE ON ID.demoID=IDE.demoID CROSS JOIN interaction_data_wf as IDW ON ID.demoID=IDW.demoID WHERE ID.demoID='%s'" % demoID
@@ -439,6 +482,58 @@ def sendUserInteractionData(mysql_user, mysql_pass, mysql_server, mysql_db, data
 		else:
 			output = "ERROR: User %s does not exist!" % userID
 
+	except mysql.connector.Error as e:
+		print "Error code: ", e.errno
+		print "SQLSTATE value:", e.sqlstate
+		print "Error message:", e.msg 
+		output = "ERROR: Interaction data could not be added"
+
+	return output
+	
+def sendUserInteractionDataAll(mysql_user, mysql_pass, mysql_server, mysql_db, data):
+	"""
+	Send user interaction data 
+	@param mysql_user: MySQL server user
+	@param mysql_pass: MySQL server user's password
+	@param mysql_server: MySQL server host
+	@param mysql_db: UPM database name
+	@param data: user for which the profile will be searched
+	@return interaction data or an error message
+	"""
+
+	try:
+		#Get important information from query:
+		if 'inter_type' in data:
+			inter_type = data['inter_type']
+		else:
+			inter_type = None
+		
+		#Connect to the MySQL database:
+		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
+		
+		
+		if inter_type == "lexical":
+			query = "SELECT * FROM interaction_data_lexical"
+		elif inter_type == "syntactic":
+			query = "SELECT * FROM interaction_data_syntactic"
+		elif inter_type == "elaboration":
+			query = "SELECT * FROM interaction_data_elaboration"
+		elif inter_type == "workflow":
+			query = "SELECT * FROM interaction_data_wf"
+		else:
+			query = "SELECT * FROM interaction_data_lexical as ID CROSS JOIN interaction_data_syntactic as IDS ON ID.demoID=IDS.demoID CROSS JOIN interaction_data_elaboration as IDE ON ID.demoID=IDE.demoID CROSS JOIN interaction_data_wf as IDW ON ID.demoID=IDW.demoID" 
+		
+		#Execute query:
+		cursor = cnx.cursor()
+		cursor.execute(query)
+		interaction_data = []
+		for c in cursor:
+			interaction_data.append(c)
+		inter_json = {'inter_data_all': interaction_data}
+
+		#Return data:
+		output = json.dumps(inter_json)
+		
 	except mysql.connector.Error as e:
 		print "Error code: ", e.errno
 		print "SQLSTATE value:", e.sqlstate
@@ -488,6 +583,96 @@ def sendUserProfileSQL(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 
 	return output
 
+def sendUserData(mysql_user, mysql_pass, mysql_server, mysql_db, data):
+	"""
+	Send demographic and interaction user data (for a given user)
+	@param mysql_user: MySQL server user
+	@param mysql_pass: MySQL server user's password
+	@param mysql_server: MySQL server host
+	@param mysql_db: UPM database name
+	@param data: user for which the profile will be searched
+	@return interaction data or an error message
+	"""
+
+	try:
+		#Get important information from query:
+		userID = data['userID']
+		if 'inter_type' in data:
+			inter_type = data['inter_type']
+		else:
+			inter_type = None
+		
+		#Connect to the MySQL database:
+		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
+
+		query = "SELECT demoID FROM demographic_data WHERE userID = '%s'" % userID
+		cursor = cnx.cursor()
+		cursor.execute(query)
+		demoID = -1
+		for c in cursor:
+			demoID = int(c[0])
+		cnx.close()
+
+		
+		
+		if demoID != -1:	
+		
+			demo_data = json.loads(sendUserDemoData(mysql_user, mysql_pass, mysql_server, mysql_db, data))
+			interaction_data = json.loads(sendUserInteractionData(mysql_user, mysql_pass, mysql_server, mysql_db, data))
+			
+			
+			all_data = dict(demo_data, **interaction_data)
+			
+
+			#Return data:
+			output = json.dumps(all_data)
+		else:
+			output = "ERROR: User %s does not exist!" % userID
+
+	except mysql.connector.Error as e:
+		print "Error code: ", e.errno
+		print "SQLSTATE value:", e.sqlstate
+		print "Error message:", e.msg 
+		output = "ERROR: Interaction data could not be added"
+
+	return output
+	
+	
+	
+def sendUserDataAll(mysql_user, mysql_pass, mysql_server, mysql_db, data):
+	"""
+	Send demographic and interaction user data (for all users)
+	@param mysql_user: MySQL server user
+	@param mysql_pass: MySQL server user's password
+	@param mysql_server: MySQL server host
+	@param mysql_db: UPM database name
+	@param data: user for which the profile will be searched
+	@return interaction data or an error message
+	"""
+
+	try:
+		
+		demo_data = json.loads(sendUserDemoDataAll(mysql_user, mysql_pass, mysql_server, mysql_db, data))
+		interaction_data = json.loads(sendUserInteractionDataAll(mysql_user, mysql_pass, mysql_server, mysql_db, data))
+			
+			
+		all_data = dict(demo_data, **interaction_data)
+			
+
+		#Return data:
+		output = json.dumps(all_data)
+
+
+	except mysql.connector.Error as e:
+		print "Error code: ", e.errno
+		print "SQLSTATE value:", e.sqlstate
+		print "Error message:", e.msg 
+		output = "ERROR: Interaction data could not be added"
+
+	return output
+	
+
+
 def loadResources(path):
 	"""
 	Code from TAE Server
@@ -519,7 +704,8 @@ def processRequest(configurations):
 	port = int(configurations['upm_local_server_port'])
 	mysql_server = configurations['mysql_local_server_host']
 	mysql_user = configurations['mysql_local_server_user']
-	mysql_pass = configurations['mysql_local_server_pass']
+	#mysql_pass = configurations['mysql_local_server_pass']
+	mysql_pass = ''
 	mysql_db = configurations['upm_database_name']
 
 	#Wait for requests:
@@ -598,15 +784,44 @@ def processRequest(configurations):
 		elif request_type == "request_inter_data": 
 		   print "*** Request type: request user interaction data"
 		   output = sendUserInteractionData(mysql_user, mysql_pass, mysql_server, mysql_db, data)
+		   
+		   
+		#Retrieve user interaction data 
+		elif request_type == "request_inter_data_all": 
+		   print "*** Request type: request user interaction data (for all users)"
+		   print
+		   print
+		   output = sendUserInteractionDataAll(mysql_user, mysql_pass, mysql_server, mysql_db, data)
+		   
+		#Retrieve user interaction data 
+		elif request_type == "request_demo_data_all": 
+		   print "*** Request type: request user demographic data (for all users)"
+		   print
+		   print
+		   output = sendUserDemoDataAll(mysql_user, mysql_pass, mysql_server, mysql_db, data)
+		   
+		#Retrieve user data (both interaction and demographic)
+		elif request_type == "request_data": 
+		   print "*** Request type: request user data (demographic and interaction) from a specific user"
+		   print
+		   print
+		   output = sendUserData(mysql_user, mysql_pass, mysql_server, mysql_db, data)
+		   
+		#Retrieve user data (both interaction and demographic)
+		elif request_type == "request_data_all": 
+		   print "*** Request type: request user data (demographic and interaction) from all users"
+		   print
+		   print
+		   output = sendUserDataAll(mysql_user, mysql_pass, mysql_server, mysql_db, data)
 
 		#Retrieve user profile/information using SQL query
-		elif request_type == "request_up_sql":
-		   print "*** Request type: request user profile (SQL)"
-		   print "SQL: %s" % data['query']
-		   output = sendUserProfileSQL(mysql_user, mysql_pass, mysql_server, mysql_db, data)
+		#elif request_type == "request_up_sql":
+		#   print "*** Request type: request user profile (SQL)"
+		#   print "SQL: %s" % data['query']
+		#   output = sendUserProfileSQL(mysql_user, mysql_pass, mysql_server, mysql_db, data)
 																
 		#Send result if the request is not a SQL query
-		if request_type != "request_up_sql" and request_type != "request_inter_data":
+		if request_type != "request_up_sql" and request_type != "request_inter_data" and request_type != "request_inter_data_all" and request_type != "request_data" and request_type != "request_demo_data_all" and request_type != "request_data_all":
 		   print "Sending... " + str(output)
 		   conn.send(output)
 		   conn.close()
@@ -657,13 +872,21 @@ def requestInterData(configurations):
 #Load resources:
 configurations = loadResources('configurations.txt')
 
+"""
+Threading is deprecated in UPM TCP server, since HTTP Server is the main server.
+Code left here for reference.
+"""
+
 #Create main thread that listens for connections and either add data to the UPM database or return user profiles
-t1 = threading.Thread(name='listening', target=processRequest, args = (configurations,))
-t1.start()
+#t1 = threading.Thread(name='listening', target=processRequest, args = (configurations,))
+#t1.start()
 
 #Create secondary thread that requests data from the LOG every 24h
-t2 = threading.Thread(name='requesting', target=requestInterData, args = (configurations,))
-t2.start()
+#t2 = threading.Thread(name='requesting', target=requestInterData, args = (configurations,))
+#t2.start()
+
+
+processRequest(configurations)
 
 
 	
