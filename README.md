@@ -77,7 +77,7 @@ sudo docker-compose up
 
 `Test_Main_UPM_Server.py`: contains 9 tests encompassing all functionalities of the main server. 
 
--- Note for the use of tokens for AAC[https://github.com/SIMPATICOProject/aac]: The first test expects a valid token to be validated by the AAC. We are using the test environment provided by FBK, but this can be changed in the `configurations.txt` file. To test this function, you will need to generate a token using the console token generation also provided by FBK. 
+-- Note for the use of tokens for AAC[https://github.com/SIMPATICOProject/aac]: The first test expects a valid token to be validated by the AAC. We are using the test environment provided by FBK, but this can be changed in the `configurations.txt` file. To test this function, you will need to generate a token using the console token generation also provided by FBK and edit the above file adding the token in the required parameter. 
 
 ### TCP tests:
 
