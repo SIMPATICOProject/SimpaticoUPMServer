@@ -93,14 +93,24 @@ class UPM:
 			#If the connection fails, return an error:
 			return {'Error': ['Error while connecting to UPM.']}
 			
-	#Request demographic data (IFE mades the request):
+	#Request demographic data (TAE/WAE mades the request):
 	def request_demo_data(self, parameters):
 	
+		#get token from IFE -- token identifies user using AAC
+		token = parameters['token'][0]
+		
+		#function to call AAC API
+		userInfo = self.check_token(token)
+		
+		#check for errors from AAC
+		if 'Error' in userInfo:
+			return userInfo 
+		
 		#Create a request to the local UPM server to request demographic data:
 		
 		info = {}
 		info['request_type'] = parameters['request_type'][0]
-		info['userID'] = parameters['userID'][0]
+		info['userID'] = userInfo['userId']
 		
 		data = json.dumps(info)
 
@@ -138,9 +148,20 @@ class UPM:
 			
 	#Request interaction data - user specific (TAE/WAE mades the request):
 	def request_inter_data(self, parameters):	
+		
+		#get token from IFE -- token identifies user using AAC
+		token = parameters['token'][0]
+		
+		#function to call AAC API
+		userInfo = self.check_token(token)
+		
+		#check for errors from AAC
+		if 'Error' in userInfo:
+			return userInfo 
+		
 		info = {}
 		info['request_type'] = parameters['request_type'][0]
-		info['userID'] = parameters['userID'][0]
+		info['userID'] = userInfo['userId']
 		info['inter_type'] = parameters['inter_type'][0]
 
 		data = json.dumps(info)
@@ -191,9 +212,19 @@ class UPM:
 			
 	#Request data (demographic and interaction) - user specific (TAE/WAE mades the request):
 	def request_data(self, parameters):	
+		#get token from IFE -- token identifies user using AAC
+		token = parameters['token'][0]
+		
+		#function to call AAC API
+		userInfo = self.check_token(token)
+		
+		#check for errors from AAC
+		if 'Error' in userInfo:
+			return userInfo 
+		
 		info = {}
 		info['request_type'] = parameters['request_type'][0]
-		info['userID'] = parameters['userID'][0]
+		info['userID'] = userInfo['userId']
 		info['inter_type'] = parameters['inter_type'][0]
 
 		data = json.dumps(info)
@@ -345,7 +376,7 @@ class UPM:
 			#If the connection fails, return an error:
 			return {'Error': ['Error while connecting to UPM.']}
 			
-		#Request data (demographic and interaction) - user specific (TAE/WAE mades the request):
+	#Request data (demographic and interaction) - user specific (TAE/WAE mades the request):
 	def request_data_all(self, parameters):	
 		info = {}
 		info['request_type'] = parameters['request_type'][0]
@@ -424,7 +455,7 @@ class UPM:
 		data = json.dumps(info)
 		
 		try:
-			#Send the send_demo_data request to the local server at the designated port:
+			#Send the send_inter_data request to the local server at the designated port:
 			s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 			s.connect((self.host, self.port))
 			print('Sending...')
