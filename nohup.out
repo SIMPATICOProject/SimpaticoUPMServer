@@ -1,0 +1,1536 @@
+Bound to 0.0.0.0:6161. Listening for connections
+incoming connection from ('127.0.0.1', 58354)
+*** Request type: add demographic data
+Traceback (most recent call last):
+  File "Run_TCP_UPM_Server.py", line 889, in <module>
+    processRequest(configurations)
+  File "Run_TCP_UPM_Server.py", line 733, in processRequest
+    output = addDemographic(mysql_user, mysql_pass, mysql_server, mysql_db, data)
+  File "Run_TCP_UPM_Server.py", line 55, in addDemographic
+    if data['disability'].strip() == "":
+AttributeError: 'NoneType' object has no attribute 'strip'
+Bound to 0.0.0.0:7171. Listening for connections
+incoming connection from ('127.0.0.1', 52210)
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user1010&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user020&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user030&time=160&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user040&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user050&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user060&time=30&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user070&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user080&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user090&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user100&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user200&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user300&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user400&time=55&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user040&type=workflow&feedback=1&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=1&time=55
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user060&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user070&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user080&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user090&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user100&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user200&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user300&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user400&type=workflow&feedback=1&time=160
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user500&type=workflow&feedback=1&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user1010&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user050&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user040&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user030&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user070&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user080&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user090&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user100&time=130&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user200&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user300&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user400&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user400&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user400&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user400&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user500&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user400&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user500&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user100&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user200&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user300&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user090&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user080&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user060&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+incoming connection from ('127.0.0.1', 52430)
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user1010&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user020&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user030&time=160&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user040&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user050&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user060&time=30&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user070&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user080&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user090&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user100&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user200&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user300&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user400&time=55&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user040&type=workflow&feedback=1&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=1&time=55
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user060&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user070&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user080&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user090&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user100&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user200&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user300&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user400&type=workflow&feedback=1&time=160
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user500&type=workflow&feedback=1&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user1010&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user050&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user040&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user030&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user070&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user080&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user090&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user100&time=130&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user200&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user300&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user400&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified127.0.0.1 - - [30/Oct/2018 17:38:09] "GET /?request_type=request_inter_data&token=94ebd08b-4218-43a0-9ca7-34408f81bb84&userID=user1010&inter_type=lexical HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 328, in handle_one_request
+    method()
+  File "Run_HTTP_UPM_Server.py", line 513, in do_GET
+    output_parameters = self.run_upm(input_parameters)
+  File "Run_HTTP_UPM_Server.py", line 549, in run_upm
+    return self.server.upm.request_inter_data(parameters)
+  File "Run_HTTP_UPM_Server.py", line 153, in request_inter_data
+    token = parameters['token'][0]
+KeyError: 'token'
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 328, in handle_one_request
+    method()
+  File "Run_HTTP_UPM_Server.py", line 513, in do_GET
+    output_parameters = self.run_upm(input_parameters)
+  File "Run_HTTP_UPM_Server.py", line 549, in run_upm
+    return self.server.upm.request_inter_data(parameters)
+  File "Run_HTTP_UPM_Server.py", line 153, in request_inter_data
+    token = parameters['token'][0]
+KeyError: 'token'
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 340, in handle
+    self.handle_one_request()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 328, in handle_one_request
+    method()
+  File "Run_HTTP_UPM_Server.py", line 513, in do_GET
+    output_parameters = self.run_upm(input_parameters)
+  File "Run_HTTP_UPM_Server.py", line 549, in run_upm
+    return self.server.upm.request_inter_data(parameters)
+  File "Run_HTTP_UPM_Server.py", line 153, in request_inter_data
+    token = parameters['token'][0]
+KeyError: 'token'
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=send_demo_data&age=20&country_birth=Brazil&languages=Italian&proficiency=C1&educational_level=primary&disability=%20&familiarity_PA=basic&occupation=None&token=94ebd08b-4218-43a0-9ca7-34408f81bb84 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=send_demo_data&age=40&country_birth=Brazil&languages=Italian&proficiency=C1&educational_level=primary&disability=%20&familiarity_PA=basic&occupation=None&token=a3245fe8-f113-4c7a-819d-8e6516e1c HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=request_demo_data&token=94ebd08b-4218-43a0-9ca7-34408f81bb84 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=send_inter_data&type=lexical&original_text=complex&simplified_text=simple&context=This%20sentence%20is%20complex%20.&index=4&feedback=0&time=500&userID=224 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=send_inter_data&type=syntactic&original_text=This%20is%20a%20very%20complex%20sentence%20and%20it%20is%20not%20possible%20to%20understand%20it%20.&simplified_text=This%20is%20a%20very%20complex%20sentence%20.%20It%20is%20not%20possible%20to%20understand%20it%20.&feedback=0&time=500&userID=224 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=send_inter_data&type=elaboration&type_elab=wikipedia&feedback=0&time=500&userID=224 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=send_inter_data&type=workflow&feedback=1&time=500&userID=224 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=request_inter_data&token=94ebd08b-4218-43a0-9ca7-34408f81bb84&inter_type=syntactic HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=request_inter_data&token=94ebd08b-4218-43a0-9ca7-34408f81bb84&inter_type=elaboration HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=request_inter_data&token=94ebd08b-4218-43a0-9ca7-34408f81bb84&inter_type=lexical HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=request_inter_data&token=94ebd08b-4218-43a0-9ca7-34408f81bb84&inter_type=workflow HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=request_inter_data_all&inter_type=workflow HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=request_inter_data_all&inter_type=elaboration HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=request_inter_data_all&inter_type=lexical HTTP/1.1" 200 -
+Bound to 0.0.0.0:6161. Listening for connections
+incoming connection from ('127.0.0.1', 58457)
+*** Request type: request user demographic data
+[(u'user1010', 30, 1, u'C1', u'postgraduate', None, u'intermediate', None, u'Afghanistan', u'Abkhazian')]
+Sending... {"proficiency": "C1", "languages": ["Abkhazian"], "familiarity_PA": "", "educational_level": "postgraduate", "disability": null, "age": 30, "country": "Afghanistan", "userID": "user1010", "occupation": null}
+incoming connection from ('127.0.0.1', 58459)
+*** Request type: request user demographic data
+[]
+Sending... {"proficiency": "", "languages": [], "familiarity_PA": "", "educational_level": "", "disability": "", "age": "", "country": "", "userID": "user001", "occupation": ""}
+incoming connection from ('127.0.0.1', 58461)
+*** Request type: request user demographic data
+[(u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'), (u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'), (u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic')]
+Sending... {"proficiency": "C2", "languages": ["Afar", "Afrikaans", "Arabic"], "familiarity_PA": "", "educational_level": "postgraduate", "disability": null, "age": 40, "country": "Angola", "userID": "user400", "occupation": null}
+incoming connection from ('127.0.0.1', 58463)
+*** Request type: request user interaction data
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58466)
+*** Request type: request user interaction data
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58469)
+*** Request type: request user interaction data
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58472)
+*** Request type: request user interaction data
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58475)
+*** Request type: add interaction data
+Sending... WARNING: user1012 is not registered in the demographic_data table! An empty entry for this user was added in demographic_data table.
+Interaction data added
+incoming connection from ('127.0.0.1', 58479)
+*** Request type: add interaction data
+Sending... Interaction data added
+incoming connection from ('127.0.0.1', 58482)
+*** Request type: add interaction data
+Sending... Interaction data added
+incoming connection from ('127.0.0.1', 58485)
+*** Request type: add interaction data
+Sending... Interaction data added
+incoming connection from ('127.0.0.1', 58488)
+*** Request type: add interaction data
+Sending... Interaction data added
+incoming connection from ('127.0.0.1', 58491)
+*** Request type: request user interaction data
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58494)
+*** Request type: request user interaction data
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58497)
+*** Request type: request user interaction data
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58500)
+*** Request type: request user interaction data
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58699)
+*** Request type: add interaction data
+Sending... WARNING: 224 is not registered in the demographic_data table! An empty entry for this user was added in demographic_data table.
+Interaction data added
+incoming connection from ('127.0.0.1', 58705)
+*** Request type: add interaction data
+Sending... Interaction data added
+incoming connection from ('127.0.0.1', 58710)
+*** Request type: add interaction data
+Sending... Interaction data added
+incoming connection from ('127.0.0.1', 58715)
+*** Request type: add interaction data
+Sending... Interaction data added
+incoming connection from ('127.0.0.1', 58732)
+*** Request type: request user interaction data (for all users)
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58736)
+*** Request type: request user interaction data (for all users)
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58740)
+*** Request type: request user interaction data (for all users)
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58744)
+*** RequRequesting interaction data from LOG
+
+This task will repeat in 24.000000 hours
+Parsing...
+Running...
+Responding...
+Parsing...
+Running...
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43267)
+----------------------------------------
+Parsing...
+Running...
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43269)
+----------------------------------------
+Parsing...
+Running...
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43271)
+----------------------------------------
+Parsing...
+Running...
+Responding...
+Parsing...
+Running...
+Responding...
+Parsing...
+Running...
+Responding...
+Parsing...
+Running...
+Sending...
+Receiving...
+Interaction Data:
+WARNING: 224 is not registered in the demographic_data table! An empty entry for this user was added in demographic_data table.
+Interaction data added
+
+Responding...
+Parsing...
+Running...
+Sending...
+Receiving...
+Interaction Data:
+Interaction data added
+
+Responding...
+Parsing...
+Running...
+Sending...
+Receiving...
+Interaction Data:
+Interaction data added
+
+Responding...
+Parsing...
+Running...
+Sending...
+Receiving...
+Interaction Data:
+Interaction data added
+
+Responding...
+Parsing...
+Running...
+Responding...
+Parsing...
+Running...
+Responding...
+Parsing...
+Running...
+Responding...
+Parsing...
+Running...
+Responding...
+Parsing...
+Running...
+*** Requesting workflow data for all users ***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[1, 1, 500, 23]
+Responding...
+Parsing...
+Running...
+*** Requesting elaboration data for all users ***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[1, u'wikipedia', 0, 500, 23]
+Responding...
+Parsing...
+Running...
+*** Requesting lexical data for all users ***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[1, u'amend', u'change', u'At least every 4 years or whenever the Council wishes to amend its Scheme , an Independent Remuneration Panel has to consider the Scheme and make recommendations to the Council .', u'11', 0, None, 0]
+[2, u'amend', u'remedy', u'At least every 4 years or whenever the Council wishes to amend its Scheme , an Independent Remuneration Panel has to consider the Scheme and make recommendations to the Council .', u'11', 0, None, 0]
+[3, u'amend', u'remediate', u'At least every 4 years or whenever the Council wishes to amend its Scheme , an Independent Remuneration Panel has to consider the Scheme and make recommendations to the Council .', u'11', 0, None, 0]
+[4, u'award', u'give', u'Make sure your child s name is placed on the register at the Learning Destination , and they ll send us their register to let us know to award credits .', u'28', 1, None, 0]
+[5, u'award', u'granted', u'Make sure your child s name is placed on the register at the Learning Destination , and they ll send us their register to let us know to award credits .', u'28', 0, None, 0]
+[6, u'award', u'submit', u'Make sure your child s name is placed on the register at the Learning Destination , and they ll send us their register to let us know to award credits .', u'28', 0, None, 0]
+[7, u'oversees', u'manages', u'The Committee promotes and maintains high standards of conduct by Councillors and Co-opted Members and oversees the Members Code of Conduct .', u'15', 1, None, 0]
+[8, u'oversees', u'oversaw', u'The Committee promotes and maintains high standards of conduct by Councillors and Co-opted Members and oversees the Members Code of Conduct .', u'15', 0, None, 0]
+[9, u'oversees', u'supervised', u'The Committee promotes and maintains high standards of conduct by Councillors and Co-opted Members and oversees the Members Code of Conduct .', u'15', 0, None, 0]
+[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23]
+Responding...
+Parsing...
+Running...
+*** Requesting syntactic data for all users ***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a ve127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=request_inter_data_all&inter_type=syntactic HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=request_inter_data_all&inter_type=%20 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=request_data&inter_type=lexical&token=94ebd08b-4218-43a0-9ca7-34408f81bb84 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:10] "GET /?request_type=request_data&inter_type=syntactic&token=94ebd08b-4218-43a0-9ca7-34408f81bb84 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:11] "GET /?request_type=request_data&inter_type=elaboration&token=94ebd08b-4218-43a0-9ca7-34408f81bb84 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:11] "GET /?request_type=request_data&inter_type=workflow&token=94ebd08b-4218-43a0-9ca7-34408f81bb84 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:11] "GET /?request_type=request_data&inter_type=%20&token=94ebd08b-4218-43a0-9ca7-34408f81bb84 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:11] "GET /?request_type=request_demo_data_all HTTP/1.1" 200 -
+ry complex sentence . It is not possible to understand it .', 0, 500, 23]
+Responding...
+Parsing...
+Running...
+*** Requesting   data for all users ***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 1, 1, 500, 23]
+Responding...
+Parsing...
+Running...
+Responding...
+Parsing...
+Running...
+Responding...
+Parsing...
+Running...
+Responding...
+Parsing...
+Running...
+Responding...
+Parsing...
+Running...
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data for all users ***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[1, u'user1010', 30, 1, u'C1', u'postgraduate', None, u'intermediate', None, u'Afghanistan', u'Abkhazian']
+[2, u'user002', 27, 2, u'C2', u'undergraduate', None, u'intermediate', None, u'Albania', u'Afar']
+[15, u'user070', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian']
+[16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian']
+[16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Akan']
+[16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Afar']
+[18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian']
+[18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan']
+[19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian']
+[19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan']
+[19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Arabic']
+[20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar']
+[20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans']
+[20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic']
+[21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar']
+[21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans']
+[21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic']
+[22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar']
+[22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans']
+[22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic']
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data and interaction data type = lexical from user all users***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+{u'demo_data_all': [[1, u'user1010', 30, 1, u'C1', u'postgraduate', None, u'intermediate', None, u'Afghanistan', u'Abkhazian'], [2, u'user002', 27, 2, u'C2', u'undergraduate', None, u'intermediate', None, u'Albania', u'Afar'], [15, u'user070', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Akan'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Afar'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Arabic'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [20, u'user2127.0.0.1 - - [30/Oct/2018 20:05:11] "GET /?request_type=request_data_all&inter_type=lexical HTTP/1.1" 200 -
+00', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic']], u'inter_data_all': [[1, u'amend', u'change', u'At least every 4 years or whenever the Council wishes to amend its Scheme , an Independent Remuneration Panel has to consider the Scheme and make recommendations to the Council .', u'11', 0, None, 0], [2, u'amend', u'remedy', u'At least every 4 years or whenever the Council wishes to amend its Scheme , an Independent Remuneration Panel has to consider the Scheme and make recommendations to the Council .', u'11', 0, None, 0], [3, u'amend', u'remediate', u'At least every 4 years or whenever the Council wishes to amend its Scheme , an Independent Remuneration Panel has to consider the Scheme and make recommendations to the Council .', u'11', 0, None, 0], [4, u'award', u'give', u'Make sure your child s name is placed on the register at the Learning Destination , and they ll send us their register to let us know to award credits .', u'28', 1, None, 0], [5, u'award', u'granted', u'Make sure your child s name is placed on the register at the Learning Destination , and they ll send us their register to let us know to award credits .', u'28', 0, None, 0], [6, u'award', u'submit', u'Make sure your child s name is placed on the register at the Learning Destination , and they ll send us their register to let us know to award credits .', u'28', 0, None, 0], [7, u'oversees', u'manages', u'The Committee promotes and maintains high standards of conduct by Councillors and Co-opted Members and oversees the Members Code of Conduct .', u'15', 1, None, 0], [8, u'oversees', u'oversaw', u'The Committee promotes and maintains high standards of conduct by Councillors and Co-opted Members and oversees the Members Code of Conduct .', u'15', 0, None, 0], [9, u'oversees', u'supervised', u'The Committee promotes and maintains high standards of conduct by Councillors and Co-opted Members and oversees the Members Code of Conduct .', u'15', 0, None, 0], [10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23]]}
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data and interaction data type = syntactic from user all users***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+{u'demo_data_all': [[1, u'user1010', 30, 1, u'C1', u'postgraduate', None, u'intermediate', None, u'Afghanistan', u'Abkhazian'], [2, u'user002', 27, 2, u'C2', u'undergraduate', None, u'intermediate', None, u'Albania', u'Afar'], [15, u'user070', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Akan'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Afar'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Arabic'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Ango127.0.0.1 - - [30/Oct/2018 20:05:11] "GET /?request_type=request_data_all&inter_type=syntactic HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:11] "GET /?request_type=request_data_all&inter_type=elaboration HTTP/1.1" 200 -
+la', u'Arabic'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic']], u'inter_data_all': [[1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23]]}
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data and interaction data type = elaboration from user all users***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+{u'demo_data_all': [[1, u'user1010', 30, 1, u'C1', u'postgraduate', None, u'intermediate', None, u'Afghanistan', u'Abkhazian'], [2, u'user002', 27, 2, u'C2', u'undergraduate', None, u'intermediate', None, u'Albania', u'Afar'], [15, u'user070', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Akan'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Afar'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Arabic'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic']], u'inter_data_all': [[1, u'wikipedia', 0, 500, 23]]}
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data and interaction data type = workflow from user all users***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+{u'demo_data_all': [[1, u'user1010', 30, 1, u'C1', u'postgraduate', None, u'intermediate', None, u'Afghanistan', u'Abkhazian'], [2, u'user002', 27, 2, u'C2', u'undergraduate', None, u'intermediate', None, u'Albania', u'Afar'], [15, u'user070', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Akan'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Afar'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', 127.0.0.1 - - [30/Oct/2018 20:05:11] "GET /?request_type=request_data_all&inter_type=workflow HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2018 20:05:11] "GET /?request_type=request_data_all&inter_type=%20 HTTP/1.1" 200 -
+_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user400&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user400&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user400&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user500&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user400&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user500&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user100&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user200&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user300&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user090&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user080&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user060&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+incoming connection from ('127.0.0.1', 52656)
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user1010&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user020&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user030&time=160&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user040&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user050&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user060&time=30&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user070&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user080&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user090&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user100&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user200&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user300&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user400&time=55&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user040&type=workflow&feedback=1&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=1&time=55
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user060&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user070&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user080&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user090&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user100&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user200&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user300&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user400&type=workflow&feedback=1&time=160
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user500&type=workflow&feedback=1&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user1010&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user050&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user040&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user030&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user070&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user080&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user090&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user100&time=130&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user200&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user300&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user400&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user400&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user400&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user400&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user500&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user400&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user500&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user100&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user200&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user300&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user090&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user080&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user060&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+incoming connection from ('127.0.0.1', 52766)
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user1010&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user020&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user030&time=160&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user040&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user050&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user060&time=30&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user070&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user080&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user090&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user100&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user200&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user300&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user400&time=55&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user040&type=workflow&feedback=1&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=1&time=55
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user060&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user070&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user080&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user090&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user100&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user200&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user300&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user400&type=workflow&feedback=1&time=160
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user500&type=workflow&feedback=1&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user1010&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user050&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user040&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user030&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user070&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user080&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user090&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user100&time=130&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user200&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user300&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user400&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user400&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user400&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user400&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user500&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user400&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user500&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user100&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user200&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user300&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user090&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user080&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user060&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+incoming connection from ('127.0.0.1', 52875)
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user1010&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user020&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user030&time=160&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user040&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user050&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user060&time=30&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user070&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user080&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user090&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user100&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user200&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user300&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user400&time=55&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user040&type=workflow&feedback=1&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=1&time=55
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user060&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user070&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user080&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user090&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user100&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user200&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user300&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user400&type=workflow&feedback=1&time=160
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user500&type=workflow&feedback=1&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user1010&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user050&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user040&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user030&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user070&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user080&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user090&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user100&time=130&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user200&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user300&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user400&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user400&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user400&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user400&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user500&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user400&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user500&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user100&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user200&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user300&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user090&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user080&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user060&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+incoming connection from ('127.0.0.1', 52981)
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user1010&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user020&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user030&time=160&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user040&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user050&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user060&time=30&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user070&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user080&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user090&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user100&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user200&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user300&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user400&time=55&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user040&type=workflow&feedback=1&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=1&time=55
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user060&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user070&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user080&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user090&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user100&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user200&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user300&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user400&type=workflow&feedback=1&time=160
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user500&type=workflow&feedback=1&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user1010&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user050&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user040&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user030&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user070&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user080&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user090&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user100&time=130&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user200&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user300&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user400&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user400&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user400&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user400&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user500&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user400&type=elaboration&feedback=1&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user500&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user100&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user200&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user300&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user090&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=wikipedia&userID=user080&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&type_elab=image&userID=user060&type=elaboration&feedback=0&time=30
+{"Error": ["Parameter \"sentence\" missing"]}
+incoming connection from ('127.0.0.1', 53091)
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user1010&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user020&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user030&time=160&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user040&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user050&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user060&time=30&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user070&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user080&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user090&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user100&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user200&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=0&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user300&time=60&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=perch&index=4&feedback=1&context=The%20cat%20perched%20no%20the%20mat.&simplified_text=sit&userID=user400&time=55&type=lexical
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user040&type=workflow&feedback=1&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user1010&type=workflow&feedback=1&time=55
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user060&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user070&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user080&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user090&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user100&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user200&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user300&type=workflow&feedback=0&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user400&type=workflow&feedback=1&time=160
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&userID=user500&type=workflow&feedback=1&time=60
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user1010&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user050&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user040&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user030&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user070&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user080&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user090&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=0&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user100&time=130&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fire%20safety%20very%20seriously.%20We%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20people%20are%20safe.&userID=user200&time=30&type=syntactic
+{"Error": ["Parameter \"sentence\" missing"]}
+http://localhost:8080/?request_type=send_inter_data&original_text=We%20want%20to%20reassure%20you%20that%20we%20take%20fire%20safety%20very%20seriously%20and%20we%20are%20doing%20everything%20we%20can%20to%20make%20sure%20our%20residents%20are%20safe.&feedback=1&simplified_text=We%20want%20to%20make%20sure%20people%20take%20fir127.0.0.1 - - [05/Nov/2018 11:30:34] "GET /?request_type=send_demo_data&age=20&country_birth=Brazil&languages=Italian&proficiency=C1&educational_level=primary&disability=%20&familiarity_PA=basic&occupation=None&token=17468ffc-870b-4ee8-ba7c-3cd36de90241 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:34] "GET /?request_type=send_demo_data&age=40&country_birth=Brazil&languages=Italian&proficiency=C1&educational_level=primary&disability=%20&familiarity_PA=basic&occupation=None&token=a3245fe8-f113-4c7a-819d-8e6516e1c HTTP/1.1" 200 -
+u'Arabic'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic']], u'inter_data_all': [[1, 1, 500, 23]]}
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data and interaction data type =   from user all users***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+{u'demo_data_all': [[1, u'user1010', 30, 1, u'C1', u'postgraduate', None, u'intermediate', None, u'Afghanistan', u'Abkhazian'], [2, u'user002', 27, 2, u'C2', u'undergraduate', None, u'intermediate', None, u'Albania', u'Afar'], [15, u'user070', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Akan'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Afar'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Arabic'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic']], u'inter_data_all': [[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 1, 1, 500, 23]]}
+Responding...
+Requesting interaction data from LOG
+
+This task will repeat in 23.999972 hours
+Requesting interaction data from LOG
+
+This task will repeat in 23.999972 hours
+Requesting interaction data from LOG
+
+This task will repeat in 23.999972 hours
+Requesting interaction data from LOG
+
+This task will repeat in 23.999972 hours
+Requesting interaction data from LOG
+
+This task will repeat in 23.999972 hours
+Parsing...
+Running...
+Sending...
+Receiving...
+Demographic Data:
+WARNING: User is already registered! Demographic data will be updated!
+Demographic data added
+
+Responding...
+Parsing...
+Running...
+Responding...
+Parsing...
+Running...
+Requesting demographic data for user: 224
+Sending...
+Receiving...
+Demographic Data:
+{u'languages': [u'Italian'], u'familiarity_PA': u'', u'country': u'Brazil', u'age': 20, u'disability': None, u'proficiency': u'C1', u'educational_level': u'127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_demo_data&token=17468ffc-870b-4ee8-ba7c-3cd36de90241 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=send_inter_data&type=lexical&original_text=complex&simplified_text=simple&context=This%20sentence%20is%20complex%20.&index=4&feedback=0&time=500&userID=224 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=send_inter_data&type=syntactic&original_text=This%20is%20a%20very%20complex%20sentence%20and%20it%20is%20not%20possible%20to%20understand%20it%20.&simplified_text=This%20is%20a%20very%20complex%20sentence%20.%20It%20is%20not%20possible%20to%20understand%20it%20.&feedback=0&time=500&userID=224 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=send_inter_data&type=elaboration&type_elab=wikipedia&feedback=0&time=500&userID=224 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=send_inter_data&type=workflow&feedback=1&time=500&userID=224 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_inter_data&token=17468ffc-870b-4ee8-ba7c-3cd36de90241&inter_type=syntactic HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_inter_data&token=17468ffc-870b-4ee8-ba7c-3cd36de90241&inter_type=elaboration HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_inter_data&token=17468ffc-870b-4ee8-ba7c-3cd36de90241&inter_type=lexical HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_inter_data&token=17468ffc-870b-4ee8-ba7c-3cd36de90241&inter_type=workflow HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_inter_data_all&inter_type=workflow HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_inter_data_all&inter_type=elaboration HTTP/1.1" 200 -
+primary', u'occupation': None, u'userID': u'224'}
+
+Responding...
+Parsing...
+Running...
+Sending...
+Receiving...
+Interaction Data:
+Interaction data added
+
+Responding...
+Parsing...
+Running...
+Sending...
+Receiving...
+Interaction Data:
+Interaction data added
+
+Responding...
+Parsing...
+Running...
+Sending...
+Receiving...
+Interaction Data:
+Interaction data added
+
+Responding...
+Parsing...
+Running...
+Sending...
+Receiving...
+Interaction Data:
+Interaction data added
+
+Responding...
+Parsing...
+Running...
+*** Requesting syntactic data from user 224***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23]
+[2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23]
+Responding...
+Parsing...
+Running...
+*** Requesting elaboration data from user 224***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[1, u'wikipedia', 0, 500, 23]
+[2, u'wikipedia', 0, 500, 23]
+Responding...
+Parsing...
+Running...
+*** Requesting lexical data from user 224***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23]
+[11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23]
+Responding...
+Parsing...
+Running...
+*** Requesting workflow data from user 224***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[1, 1, 500, 23]
+[2, 1, 500, 23]
+Responding...
+Parsing...
+Running...
+*** Requesting workflow data for all users ***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[1, 1, 500, 23]
+[2, 1, 500, 23]
+Responding...
+Parsing...
+Running...
+*** Requesting elaboration data for all users ***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[1, u'wikipedia', 0, 500, 23]
+[2, u'wikipedia', 0, 500, 23]
+Responding...
+Parsing...
+Running...
+*** Requesting lexical data for all users ***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[1, u'amend', u'change', u'At least every 4 years or whenever the Council wishes to amend its Scheme , an Independent Remuneration Panel has to consider the Scheme and make recommendations to the Council .', u'11', 0, None, 0]
+[2, u'amend', u'remedy', u'At least every 4 years or whenever the Council wishes to amend its Scheme , an Independent Remuneration Panel has to consider the Scheme and make recommendations to the Council .', u'11', 0, None, 0]
+[3, u'amend', u'remediate', u'At least every 4 years or whenever the Council wishes to amend its Scheme , an Independent Remuneration Panel has to consider the Scheme and make recommendations to the Council .', u'11', 0, None, 0]
+[4, u'award', u'give', u'Make sure your child s name is placed on the register at the Learning Destination , and they ll send us their register to let us know to award credits .', u'28', 1, None, 0]
+[5, u'award', u'granted', u'Make sure your child s name is placed on the register at the Learning Destination , and they ll send us their register to let us know to award credits .', u'28', 0, None, 0]
+[6, u'award', u'submit', u'Make sure your child s name is placed on the register at the Learning Destination , and they ll send us their register to let us know to award credits .', u'28', 0, None, 0]
+[7, u'oversees', u'manages', u'The Committee promotes and maintains high standards of conduct by Councillors and Co-opted Members and oversees the Members Code of Conduct .', u'15', 1, None, 0]
+[8, u'oversees', u'oversaw', u'The Committee promotes and maintains high standards of conduct by Councillors and Co-opted Members and oversees the Members Code of Conduct .', u'15', 0, None, 0]
+[9, u'oversees', u'supervised', u'The Committee promotes and maintains high standards of conduct by Councillors and Co-opted Members and oversees the Members Code of Conduct .', u'15', 0, None, 0]
+[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500,127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_inter_data_all&inter_type=lexical HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_inter_data_all&inter_type=syntactic HTTP/1.1" 200 -
+ 23]
+[11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23]
+Responding...
+Parsing...
+Running...
+*** Requesting syntactic data for all users ***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23]
+[2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23]
+Responding...
+Parsing...
+Running...
+*** Requesting   data for all users ***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+Receiving batch 2 ...
+[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 1, 1, 500, 23]
+[11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 1, 1, 500, 23]
+[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 1, 1, 500, 23]
+[11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 1, 1, 500, 23]
+[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 2, 1, 500, 23]
+[11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 2, 1, 500, 23]
+[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 2, 1, 500, 23]
+[11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 2, 1, 500, 23]
+[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 1, 1, 500, 23]
+[11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 1, 1, 500, 23]
+[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 1, 1, 500, 23]
+[11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very com127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_inter_data_all&inter_type=%20 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_data&inter_type=lexical&token=17468ffc-870b-4ee8-ba7c-3cd36de90241 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_data&inter_type=syntactic&token=17468ffc-870b-4ee8-ba7c-3cd36de90241 HTTP/1.1" 200 -
+est type: request user interaction data (for all users)
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58748)
+*** Request type: request user interaction data (for all users)
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58767)
+*** Request type: request user demographic data (for all users)
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58771)
+*** Request type: request user data (demographic and interaction) from all users
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58776)
+*** Request type: request user data (demographic and interaction) from all users
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58781)
+*** Request type: request user data (demographic and interaction) from all users
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58786)
+*** Request type: request user data (demographic and interaction) from all users
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 58791)
+*** Request type: request user data (demographic and interaction) from all users
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 59352)
+*** Request type: add demographic data
+[u'Italian']
+Sending... WARNING: User is already registered! Demographic data will be updated!
+Demographic data added
+incoming connection from ('127.0.0.1', 59364)
+*** Request type: request user demographic data
+[(u'224', 20, 24, u'C1', u'primary', None, u'basic', None, u'Brazil', u'Italian')]
+Sending... {"proficiency": "C1", "languages": ["Italian"], "familiarity_PA": "", "educational_level": "primary", "disability": null, "age": 20, "country": "Brazil", "userID": "224", "occupation": null}
+incoming connection from ('127.0.0.1', 59368)
+*** Request type: add interaction data
+Sending... Interaction data added
+incoming connection from ('127.0.0.1', 59373)
+*** Request type: add interaction data
+Sending... Interaction data added
+incoming connection from ('127.0.0.1', 59378)
+*** Request type: add interaction data
+Sending... Interaction data added
+incoming connection from ('127.0.0.1', 59383)
+*** Request type: add interaction data
+Sending... Interaction data added
+incoming connection from ('127.0.0.1', 59389)
+*** Request type: request user interaction data
+Sending data in batches...
+incoming connection from ('127.0.0.1', 59395)
+*** Request type: request user interaction data
+Sending data in batches...
+incoming connection from ('127.0.0.1', 59401)
+*** Request type: request user interaction data
+Sending data in batches...
+incoming connection from ('127.0.0.1', 59407)
+*** Request type: request user interaction data
+Sending data in batches...
+incoming connection from ('127.0.0.1', 59412)
+*** Request type: request user interaction data (for all users)
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 59416)
+*** Request type: request user interaction data (for all users)
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 59420)
+*** Request type: request user interaction data (for all users)
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 59424)
+*** Request type: request user interaction data (for all users)
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 59428)
+*** Request type: request user interaction data (for all users)
+
+
+Sending data in batches...
+incoming connection from ('127.0.0.1', 59433)
+*** Request type: request user data (demographic and interaction) from a specific user
+
+
+[(u'224', 20, 24, u'C1', u'primary', None, u'basic', None, u'Brazil', u'Italian')]
+Sending data in batches...
+incoming connection from ('127.0.0.1', 59441)
+*** Request type: request user data (demographic and interaction) from a specific user
+
+
+[(u'224', 20, 24, u'C1', u'primary', None, u'basic', None, u'Brazil', u'Italian')]
+Sending data in batches...
+incoming connection from ('127.0.0.1', 59449)
+*** Request type: request user data (demographic and interaction) from a specific user
+
+
+[(u'224', 20, 24, u'C1', u'primary', None, u'basic', None, u'Brazil', u'Italian')]
+Sending 127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_data&inter_type=elaboration&token=17468ffc-870b-4ee8-ba7c-3cd36de90241 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_data&inter_type=workflow&token=17468ffc-870b-4ee8-ba7c-3cd36de90241 HTTP/1.1" 200 -
+plex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 1, 1, 500, 23]
+[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 2, 1, 500, 23]
+[11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 2, 1, 500, 23]
+[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 2, 1, 500, 23]
+[11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 2, 1, 500, 23]
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data and interaction data type = lexical from user 224***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+{u'languages': [u'Italian'], u'familiarity_PA': u'', u'country': u'Brazil', u'age': 20, u'educational_level': u'primary', u'disability': None, u'proficiency': u'C1', u'inter_data': [[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23]], u'occupation': None, u'userID': u'224'}
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data and interaction data type = syntactic from user 224***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+{u'languages': [u'Italian'], u'familiarity_PA': u'', u'country': u'Brazil', u'age': 20, u'educational_level': u'primary', u'disability': None, u'proficiency': u'C1', u'inter_data': [[1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23], [2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23]], u'occupation': None, u'userID': u'224'}
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data and interaction data type = elaboration from user 224***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+{u'languages': [u'Italian'], u'familiarity_PA': u'', u'country': u'Brazil', u'age': 20, u'educational_level': u'primary', u'disability': None, u'proficiency': u'C1', u'inter_data': [[1, u'wikipedia', 0, 500, 23], [2, u'wikipedia', 0, 500, 23]], u'occupation': None, u'userID': u'224'}
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data and interaction data type = workflow from user 224***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+{u'languages': [u'Italian'], u'familiarity_PA': u'', u'country': u'Brazil', u'age': 20, u'educational_level': u'primary', u'disability': None, u'proficiency': u'C1', u'inter_data': [[1, 1, 500, 23], [2, 1, 500, 23]], u'occupation': None, u'userID': u'224'}
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data and interaction data type =   from user 224***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+Receiving batch 2 ...
+{u'languages': [u'Italian'], u'familiarity_PA': u'', u'country': u'Brazil', u'age': 20, u'educational_level': u'primary', u'disability': None, u'proficiency': u'C1', u'inter_data': [[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 2, 1, 500, 23], [10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 2, 1, 500, 23], [10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 2, 1, 500, 23], [10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 2, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 2, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 2, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 2, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_data&inter_type=%20&token=17468ffc-870b-4ee8-ba7c-3cd36de90241 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_demo_data_all HTTP/1.1" 200 -
+, 23, 2, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 2, 1, 500, 23]], u'occupation': None, u'userID': u'224'}
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data for all users ***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[1, u'user1010', 30, 1, u'C1', u'postgraduate', None, u'intermediate', None, u'Afghanistan', u'Abkhazian']
+[2, u'user002', 27, 2, u'C2', u'undergraduate', None, u'intermediate', None, u'Albania', u'Afar']
+[15, u'user070', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian']
+[16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian']
+[16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Akan']
+[16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Afar']
+[18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian']
+[18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan']
+[19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian']
+[19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan']
+[19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Arabic']
+[20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar']
+[20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans']
+[20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic']
+[21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar']
+[21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans']
+[21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic']
+[22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar']
+[22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans']
+[22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic']
+[23, u'224', 20, 24, u'C1', u'primary', None, u'basic', None, u'Brazil', u'Italian']
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data and interaction data type = lexical from user all users***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+{u'demo_data_all': [[1, u'user1010', 30, 1, u'C1', u'postgraduate', None, u'intermediate', None, u'Afghanistan', u'Abkhazian'], [2, u'user002', 27, 2, u'C2', u'undergraduate', None, u'intermediate', None, u'Albania', u'Afar'], [15, u'user070', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Akan'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Afar'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Arabic'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [21, u'user300', 40, 5, u'C2', u'postgraduate', No127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_data_all&inter_type=lexical HTTP/1.1" 200 -
+ne, None, None, u'Angola', u'Afrikaans'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [23, u'224', 20, 24, u'C1', u'primary', None, u'basic', None, u'Brazil', u'Italian']], u'inter_data_all': [[1, u'amend', u'change', u'At least every 4 years or whenever the Council wishes to amend its Scheme , an Independent Remuneration Panel has to consider the Scheme and make recommendations to the Council .', u'11', 0, None, 0], [2, u'amend', u'remedy', u'At least every 4 years or whenever the Council wishes to amend its Scheme , an Independent Remuneration Panel has to consider the Scheme and make recommendations to the Council .', u'11', 0, None, 0], [3, u'amend', u'remediate', u'At least every 4 years or whenever the Council wishes to amend its Scheme , an Independent Remuneration Panel has to consider the Scheme and make recommendations to the Council .', u'11', 0, None, 0], [4, u'award', u'give', u'Make sure your child s name is placed on the register at the Learning Destination , and they ll send us their register to let us know to award credits .', u'28', 1, None, 0], [5, u'award', u'granted', u'Make sure your child s name is placed on the register at the Learning Destination , and they ll send us their register to let us know to award credits .', u'28', 0, None, 0], [6, u'award', u'submit', u'Make sure your child s name is placed on the register at the Learning Destination , and they ll send us their register to let us know to award credits .', u'28', 0, None, 0], [7, u'oversees', u'manages', u'The Committee promotes and maintains high standards of conduct by Councillors and Co-opted Members and oversees the Members Code of Conduct .', u'15', 1, None, 0], [8, u'oversees', u'oversaw', u'The Committee promotes and maintains high standards of conduct by Councillors and Co-opted Members and oversees the Members Code of Conduct .', u'15', 0, None, 0], [9, u'oversees', u'supervised', u'The Committee promotes and maintains high standards of conduct by Councillors and Co-opted Members and oversees the Members Code of Conduct .', u'15', 0, None, 0], [10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23]]}
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data and interaction data type = syntactic from user all users***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+{u'demo_data_all': [[1, u'user1010', 30, 1, u'C1', u'postgraduate', None, u'intermediate', None, u'Afghanistan', u'Abkhazian'], [2, u'user002', 27, 2, u'C2', u'undergraduate', None, u'intermediate', None, u'Albania', u'Afar'], [15, u'user070', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Akan'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Afar'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Arabic'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [21, u'user300', 40, 5, u'C2', u'127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_data_all&inter_type=syntactic HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_data_all&inter_type=elaboration HTTP/1.1" 200 -
+postgraduate', None, None, None, u'Angola', u'Afar'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [23, u'224', 20, 24, u'C1', u'primary', None, u'basic', None, u'Brazil', u'Italian']], u'inter_data_all': [[1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23], [2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23]]}
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data and interaction data type = elaboration from user all users***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+{u'demo_data_all': [[1, u'user1010', 30, 1, u'C1', u'postgraduate', None, u'intermediate', None, u'Afghanistan', u'Abkhazian'], [2, u'user002', 27, 2, u'C2', u'undergraduate', None, u'intermediate', None, u'Albania', u'Afar'], [15, u'user070', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Akan'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Afar'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Arabic'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [23, u'224', 20, 24, u'C1', u'primary', None, u'basic', None, u'Brazil', u'Italian']], u'inter_data_all': [[1, u'wikipedia', 0, 500, 23], [2, u'wikipedia', 0, 500, 23]]}
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data and interaction data type = workflow from user all users***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+{u'demo_data_all': [[1, u'user1010', 30, 1, u'C1', u'postgraduate', None, u'intermediate', None, u'Afghanistan', u'Abkhazian'], [2, u'user002', 27, 2, u'C2', u'undergraduate', None, u'intermediate', None, u'Albania', u'Afar'], [15, u'user070', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Akan'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Afar'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [18, u'user090', 50, 5,127.0.0.1 - - [05/Nov/2018 11:30:35] "GET /?request_type=request_data_all&inter_type=workflow HTTP/1.1" 200 -
+ u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Arabic'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [23, u'224', 20, 24, u'C1', u'primary', None, u'basic', None, u'Brazil', u'Italian']], u'inter_data_all': [[1, 1, 500, 23], [2, 1, 500, 23]]}
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data and interaction data type =   from user all users***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+Receiving batch 2 ...
+{u'demo_data_all': [[1, u'user1010', 30, 1, u'C1', u'postgraduate', None, u'intermediate', None, u'Afghanistan', u'Abkhazian'], [2, u'user002', 27, 2, u'C2', u'undergraduate', None, u'intermediate', None, u'Albania', u'Afar'], [15, u'user070', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Akan'], [16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Afar'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan'], [19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Arabic'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [21, u'user300', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans'], [22, u'user400', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Arabic'], [23, u'224', 20, 24, u'C1', u'primary', None, u'basic', None, u'Brazil', u'Italian']], u'inter_data_all': [[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [10, u'complex', u'simple', u'This sentence is complex 127.0.0.1 - - [05/Nov/2018 11:30:36] "GET /?request_type=request_data_all&inter_type=%20 HTTP/1.1" 200 -
+.', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 2, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 2, 1, 500, 23], [10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 2, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 1, u'wikipedia', 0, 500, 23, 2, 1, 500, 23], [10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 1, 1, 500, 23], [10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 2, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 1, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 2, 1, 500, 23], [10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 2, 1, 500, 23], [11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23, 2, u'This is a very complex sentence and it is not possible to understand it .', u'This is a very complex sentence . It is not possible to understand it .', 0, 500, 23, 2, u'wikipedia', 0, 500, 23, 2, 1, 500, 23]]}
+Responding...
+Parsing...
+Running...
+Requesting demographic data for user: 22127.0.0.1 - - [05/Nov/2018 11:36:49] "GET /?request_type=request_demo_data&token=17468ffc-870b-4ee8-ba7c-3cd36de90241 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:36:49] "GET /?request_type=request_inter_data&token=17468ffc-870b-4ee8-ba7c-3cd36de90241&inter_type=lexical HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2018 11:36:49] "GET /?request_type=request_inter_data_all&inter_type=lexical HTTP/1.1" 200 -
+4
+Sending...
+Receiving...
+Demographic Data:
+{u'languages': [u'Italian'], u'familiarity_PA': u'', u'country': u'Brazil', u'age': 20, u'disability': None, u'proficiency': u'C1', u'educational_level': u'primary', u'occupation': None, u'userID': u'224'}
+
+Responding...
+Parsing...
+Running...
+*** Requesting lexical data from user 224***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23]
+[11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23]
+Responding...
+Parsing...
+Running...
+*** Requesting lexical data for all users ***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[1, u'amend', u'change', u'At least every 4 years or whenever the Council wishes to amend its Scheme , an Independent Remuneration Panel has to consider the Scheme and make recommendations to the Council .', u'11', 0, None, 0]
+[2, u'amend', u'remedy', u'At least every 4 years or whenever the Council wishes to amend its Scheme , an Independent Remuneration Panel has to consider the Scheme and make recommendations to the Council .', u'11', 0, None, 0]
+[3, u'amend', u'remediate', u'At least every 4 years or whenever the Council wishes to amend its Scheme , an Independent Remuneration Panel has to consider the Scheme and make recommendations to the Council .', u'11', 0, None, 0]
+[4, u'award', u'give', u'Make sure your child s name is placed on the register at the Learning Destination , and they ll send us their register to let us know to award credits .', u'28', 1, None, 0]
+[5, u'award', u'granted', u'Make sure your child s name is placed on the register at the Learning Destination , and they ll send us their register to let us know to award credits .', u'28', 0, None, 0]
+[6, u'award', u'submit', u'Make sure your child s name is placed on the register at the Learning Destination , and they ll send us their register to let us know to award credits .', u'28', 0, None, 0]
+[7, u'oversees', u'manages', u'The Committee promotes and maintains high standards of conduct by Councillors and Co-opted Members and oversees the Members Code of Conduct .', u'15', 1, None, 0]
+[8, u'oversees', u'oversaw', u'The Committee promotes and maintains high standards of conduct by Councillors and Co-opted Members and oversees the Members Code of Conduct .', u'15', 0, None, 0]
+[9, u'oversees', u'supervised', u'The Committee promotes and maintains high standards of conduct by Councillors and Co-opted Members and oversees the Members Code of Conduct .', u'15', 0, None, 0]
+[10, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23]
+[11, u'complex', u'simple', u'This sentence is complex .', u'4', 0, 500, 23]
+Responding...
+Parsing...
+Running...
+*** Requesting demographic data for all users ***
+Sending...
+Receiving data in batches...
+Receiving batch 1 ...
+[1, u'user1010', 30, 1, u'C1', u'postgraduate', None, u'intermediate', None, u'Afghanistan', u'Abkhazian']
+[2, u'user002', 27, 2, u'C2', u'undergraduate', None, u'intermediate', None, u'Albania', u'Afar']
+[15, u'user070', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian']
+[16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Abkhazian']
+[16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Akan']
+[16, u'user080', 50, 1, u'C1', u'undergraduate', None, None, None, u'Afghanistan', u'Afar']
+[18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian']
+[18, u'user090', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan']
+[19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Abkhazian']
+[19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Akan']
+[19, u'user100', 50, 5, u'C1', u'undergraduate', None, None, None, u'Angola', u'Arabic']
+[20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afar']
+[20, u'user200', 40, 5, u'C2', u'postgraduate', None, None, None, u'Angola', u'Afrikaans']
+[20, u'user200', 40, 5, 127.0.0.1 - - [05/Nov/2018 11:36:49] "GET /?request_type=request_demo_data_all HTTP/1.1" 200 -

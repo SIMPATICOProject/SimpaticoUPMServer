@@ -505,12 +505,15 @@ class SimpaticoUPMHandler(BaseHTTPRequestHandler):
 	#Handler for the GET requests
 	def do_GET(self):
 		#Get parameters from URL:
+		print('Parsing...')
 		input_parameters = self.parse_parameters(self.path)
 		
 		#Resolve run upm request:
+		print('Running...')
 		output_parameters = self.run_upm(input_parameters)
 		
 		#Send response:
+		print('Responding...')
 		self.respond(output_parameters)
 		return
 	
