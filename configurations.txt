@@ -1,6 +1,6 @@
 main_upm_server_host	 localhost
 aac_server_host	 https://dev.smartcommunitylab.it/aac/basicprofile/me
-main_upm_server_port	 9090
+main_upm_server_port	 8080
 log_local_server_port	7171
 log_local_server_host	locahost
 upm_local_server_port	6161

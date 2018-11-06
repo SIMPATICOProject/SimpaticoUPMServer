@@ -468,6 +468,7 @@ def loadResources(path):
 
 def da_server(configurations):
     hostname = '0.0.0.0'
+    port_main = configurations['main_upm_server_port']
     port = int(configurations['log_local_server_port'])
     serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     serversocket.bind((hostname, port))
@@ -483,7 +484,7 @@ def da_server(configurations):
         if request_type == 'inter_data_upm':
             data = dumpData()
             for d in data:
-                url = 'http://localhost:8080/?request_type=send_inter_data'
+                url = 'http://localhost:' + port_main + '/?request_type=send_inter_data'
                 for k in d.keys():
                     url = url + '&' + k +'=' + d[k].replace(" ","%20") 
                 print url
