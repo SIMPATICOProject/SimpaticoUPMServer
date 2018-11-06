@@ -307,7 +307,7 @@ def sendUserDemoData(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 			languages.append(demo[9])
 		
 		send_demo = {
-			'userID': userID,
+			#'userID': userID,
 			'age': age,
 			'proficiency': proficiency,
 			'educational_level': educational_level,
@@ -348,7 +348,7 @@ def sendUserDemoDataAll(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 		#connection to the MySQL database
 		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
 
-		query = "SELECT d.demoID, d.userID, d.age, d.country_birth, d.proficiency, d.educational_level, d.disability, d.familiarity_PA, d.occupation, c.country, l.language FROM demographic_data as `d` INNER JOIN country as `c` ON d.country_birth = c.countryID INNER JOIN native_languages as `n` ON d.demoID = n.userID INNER JOIN languages as `l` ON n.native_language = l.languageID"
+		query = "SELECT d.demoID, d.age, d.country_birth, d.proficiency, d.educational_level, d.disability, d.familiarity_PA, d.occupation, c.country, l.language FROM demographic_data as `d` INNER JOIN country as `c` ON d.country_birth = c.countryID INNER JOIN native_languages as `n` ON d.demoID = n.userID INNER JOIN languages as `l` ON n.native_language = l.languageID"
 		cursor = cnx.cursor()
 		cursor.execute(query)
 		
