@@ -3,6 +3,7 @@ import urllib2
 port = '8080'
 token = '17468ffc-870b-4ee8-ba7c-3cd36de90241'
 
+
 ### Test 1
 print "*** Test 1: IFE send demographic data to UPM"
 
@@ -250,6 +251,27 @@ print
 print "*** Test 9.5: TAE/WAE requests data (both demographic and interaction -- all) from all users"
 
 url = 'http://localhost:'+port+'/?request_type=request_data_all&inter_type=%20'
+
+content = urllib2.urlopen(url).read()
+
+print content
+print
+
+
+### Test 10
+print "*** Test 10.1: TAE/WAE request list of countries registered in the DB"
+
+url = 'http://localhost:'+port+'/?request_type=request_countries'
+
+content = urllib2.urlopen(url).read()
+
+print content
+print
+
+
+print "*** Test 10.2: TAE/WAE request list of languages registered in the DB"
+
+url = 'http://localhost:'+port+'/?request_type=request_lang'
 
 content = urllib2.urlopen(url).read()
 

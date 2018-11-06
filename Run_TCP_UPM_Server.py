@@ -670,8 +670,70 @@ def sendUserDataAll(mysql_user, mysql_pass, mysql_server, mysql_db, data):
 		output = "ERROR: Interaction data could not be added"
 
 	return output
-	
 
+def sendCountriesList(mysql_user, mysql_pass, mysql_server, mysql_db):
+	"""
+	Send list of all countries registered
+	@param mysql_user: MySQL server user
+	@param mysql_pass: MySQL server user's password
+	@param mysql_server: MySQL server host
+	@param mysql_db: UPM database name
+	@return list of languages
+	"""
+
+        try:
+		#Connect to the MySQL database:
+		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
+
+		query = "SELECT * FROM country"
+		cursor = cnx.cursor()
+		cursor.execute(query)
+                countries = []
+		for c in cursor:
+			countries.append(c)
+		cnx.close()
+                
+                output = json.dumps(countries)
+
+	except mysql.connector.Error as e:
+		print "Error code: ", e.errno
+		print "SQLSTATE value:", e.sqlstate
+		print "Error message:", e.msg 
+		output = "ERROR: Languages could not be found"
+
+	return output
+
+def sendLanguagesList(mysql_user, mysql_pass, mysql_server, mysql_db):
+	"""
+	Send list of all languages registered
+	@param mysql_user: MySQL server user
+	@param mysql_pass: MySQL server user's password
+	@param mysql_server: MySQL server host
+	@param mysql_db: UPM database name
+	@return list of languages
+	"""
+
+        try:
+		#Connect to the MySQL database:
+		cnx = mysql.connector.connect(user = mysql_user, password = mysql_pass, host = mysql_server, database = mysql_db)
+
+		query = "SELECT * FROM languages"
+		cursor = cnx.cursor()
+		cursor.execute(query)
+                languages = []
+		for c in cursor:
+			languages.append(c)
+		cnx.close()
+                
+                output = json.dumps(languages)
+
+	except mysql.connector.Error as e:
+		print "Error code: ", e.errno
+		print "SQLSTATE value:", e.sqlstate
+		print "Error message:", e.msg 
+		output = "ERROR: Languages could not be found"
+
+	return output
 
 def loadResources(path):
 	"""
@@ -727,6 +789,16 @@ def processRequest(configurations):
 		request_type = data['request_type']
 		output = ""
 		
+		#Request list of languages registered in the DB	
+		if request_type == "request_lang":
+			print "*** Request type: request list of languages in the DB"
+			output = sendLanguagesList(mysql_user, mysql_pass, mysql_server, mysql_db)
+
+		#Request list of countries registered in the DB	
+		if request_type == "request_countries":
+			print "*** Request type: request list of countries in the DB"
+			output = sendCountriesList(mysql_user, mysql_pass, mysql_server, mysql_db)
+
 		#Add demographic data request	
 		if request_type == "send_demo_data":
 			print "*** Request type: add demographic data"
@@ -821,7 +893,7 @@ def processRequest(configurations):
 		#   output = sendUserProfileSQL(mysql_user, mysql_pass, mysql_server, mysql_db, data)
 																
 		#Send result if the request is not a SQL query
-		if request_type != "request_up_sql" and request_type != "request_inter_data" and request_type != "request_inter_data_all" and request_type != "request_data" and request_type != "request_demo_data_all" and request_type != "request_data_all":
+		if request_type != "request_up_sql" and request_type != "request_inter_data" and request_type != "request_inter_data_all" and request_type != "request_data" and request_type != "request_demo_data_all" and request_type != "request_data_all" and request_type != "request_lang" and request_type != "request_countries":
 		   print "Sending... " + str(output)
 		   conn.send(output)
 		   conn.close()

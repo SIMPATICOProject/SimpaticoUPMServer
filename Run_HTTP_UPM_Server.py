@@ -484,7 +484,103 @@ class UPM:
 			#If the connection fails, return an error:
 			return {'Error': ['Error while connecting to UPM.']}
 
+	#Request list of countries registered in the DB:
+	def request_countries(self, parameters):	
+		info = {}
+		info['request_type'] = parameters['request_type'][0]
 
+		data = json.dumps(info)
+		
+		try:
+			#Send the request_countries request to the local server at the designated port:
+			s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+			s.connect((self.host, self.port))
+			
+			print('*** Requesting list of countries in the DB ***')
+			print('Sending...')
+			s.send(data+'\n')
+
+			print('Receiving data in batches...')
+			bs = s.recv(8)
+			(length,) = unpack('>Q', bs)
+			data = b''
+			c = 1
+			
+			while len(data) < length:
+				print('Receiving batch %d ...' % c)
+				to_read = length - len(data)
+				data += s.recv(4096 if to_read > 4096 else to_read)
+				c += 1
+			assert len(b'\00') == 1
+			s.sendall(b'\00')
+			
+			profile = json.loads(data)
+
+			print profile
+			
+			#Close the TCP connection:
+			s.close()
+			
+			if profile=='NULL':
+				#If no simplification was found, return an error:
+				return {'Error': ['UPM has not answered.']}
+			else:
+				#Otherwise, send back a simplification response:
+				result = dict(parameters)
+				result['target'] = [profile]
+				return result
+		except Exception as exc:
+			#If the connection fails, return an error:
+			return {'Error': ['Error while connecting to UPM.']}
+
+	#Request list of languages registered in the DB:
+	def request_lang(self, parameters):	
+		info = {}
+		info['request_type'] = parameters['request_type'][0]
+
+		data = json.dumps(info)
+		
+		try:
+			#Send the request_lang request to the local server at the designated port:
+			s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+			s.connect((self.host, self.port))
+			
+			print('*** Requesting list of languages in the DB ***')
+			print('Sending...')
+			s.send(data+'\n')
+
+			print('Receiving data in batches...')
+			bs = s.recv(8)
+			(length,) = unpack('>Q', bs)
+			data = b''
+			c = 1
+			
+			while len(data) < length:
+				print('Receiving batch %d ...' % c)
+				to_read = length - len(data)
+				data += s.recv(4096 if to_read > 4096 else to_read)
+				c += 1
+			assert len(b'\00') == 1
+			s.sendall(b'\00')
+			
+			profile = json.loads(data)
+
+			print profile
+			
+			#Close the TCP connection:
+			s.close()
+			
+			if profile=='NULL':
+				#If no simplification was found, return an error:
+				return {'Error': ['UPM has not answered.']}
+			else:
+				#Otherwise, send back a simplification response:
+				result = dict(parameters)
+				result['target'] = [profile]
+				return result
+		except Exception as exc:
+			#If the connection fails, return an error:
+			return {'Error': ['Error while connecting to UPM.']}
 
 #This class represents the UPM server handler of Simpatico:
 class SimpaticoUPMServer(HTTPServer, object):
@@ -536,7 +632,14 @@ class SimpaticoUPMHandler(BaseHTTPRequestHandler):
 			return parameters
 		else:
 			#Perform an UPM request:
-			if parameters['request_type'][0]=='send_demo_data':
+
+			if parameters['request_type'][0]=='request_lang':
+				return self.server.upm.request_lang(parameters)
+
+			elif parameters['request_type'][0]=='request_countries':
+				return self.server.upm.request_countries(parameters)
+
+			elif parameters['request_type'][0]=='send_demo_data':
 				return self.server.upm.send_demo_data(parameters)
 				
 			elif parameters['request_type'][0]=='request_demo_data':
